@@ -1,63 +1,137 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-gradient-to-b from-zinc-50 to-zinc-100 dark:from-zinc-950 dark:to-zinc-900 p-8">
+      <main className="container mx-auto max-w-6xl">
+        {/* Header */}
+        <div className="mb-12 text-center">
+          <h1 className="text-4xl font-bold tracking-tight mb-4">
+            Next.js + shadcn/ui Starter
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-muted-foreground text-lg">
+            Built with Next.js 16, TypeScript, Tailwind CSS v4, and shadcn/ui
           </p>
+          <div className="flex gap-2 justify-center mt-4">
+            <Badge>Next.js 16</Badge>
+            <Badge variant="secondary">TypeScript</Badge>
+            <Badge variant="outline">Tailwind v4</Badge>
+            <Badge>shadcn/ui</Badge>
+            <Badge variant="secondary">App Router</Badge>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Component Showcase */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Buttons Card */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Button Components</CardTitle>
+              <CardDescription>
+                Various button styles from shadcn/ui
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex flex-wrap gap-2">
+              <Button>Default</Button>
+              <Button variant="secondary">Secondary</Button>
+              <Button variant="destructive">Destructive</Button>
+              <Button variant="outline">Outline</Button>
+              <Button variant="ghost">Ghost</Button>
+              <Button variant="link">Link</Button>
+            </CardContent>
+          </Card>
+
+          {/* Form Card */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Form Elements</CardTitle>
+              <CardDescription>Input and label components</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" type="email" placeholder="Enter your email" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="name">Name</Label>
+                <Input id="name" type="text" placeholder="Enter your name" />
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full">Submit</Button>
+            </CardFooter>
+          </Card>
+
+          {/* Profile Card */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Avatar Component</CardTitle>
+              <CardDescription>User profile example</CardDescription>
+            </CardHeader>
+            <CardContent className="flex items-center gap-4">
+              <Avatar className="h-16 w-16">
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+              <div>
+                <h3 className="font-semibold">shadcn</h3>
+                <p className="text-sm text-muted-foreground">@shadcn</p>
+                <Badge variant="secondary" className="mt-2">
+                  Developer
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Info Card */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Getting Started</CardTitle>
+              <CardDescription>Next steps for your project</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              <div className="flex items-center gap-2">
+                <Badge variant="outline">1</Badge>
+                <span className="text-sm">Edit app/page.tsx to customize</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Badge variant="outline">2</Badge>
+                <span className="text-sm">Add more components with CLI</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Badge variant="outline">3</Badge>
+                <span className="text-sm">Run npm run dev to start</span>
+              </div>
+            </CardContent>
+            <CardFooter className="gap-2">
+              <Button variant="outline" className="flex-1">
+                Docs
+              </Button>
+              <Button className="flex-1">Start Building</Button>
+            </CardFooter>
+          </Card>
+        </div>
+
+        {/* Footer */}
+        <div className="mt-12 text-center text-sm text-muted-foreground">
+          <p>
+            Add more components with:{" "}
+            <code className="bg-muted px-2 py-1 rounded">
+              npx shadcn@latest add [component]
+            </code>
+          </p>
         </div>
       </main>
     </div>
