@@ -95,6 +95,13 @@ export function HeroCarousel() {
       </div>
 
       <div className="container relative mx-auto px-4 md:px-6">
+        {/* One-line header */}
+        <div className="text-center mb-4 md:mb-6">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+            Creating Sustainable Value
+          </h1>
+        </div>
+
         {/* Carousel container */}
         <div 
           ref={containerRef}
