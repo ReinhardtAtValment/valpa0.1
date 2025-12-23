@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "headline": "Contact us",
+    "subheadline": "We'll follow up to discuss how we can help."
+  },
+  "form": {
+    "sections": {
+      "contact": {
+        "label": "Your Information",
+        "fields": [
+          {
+            "name": "name",
+            "label": "Name",
+            "type": "text",
+            "placeholder": "Your name",
+            "required": true
+          },
+          {
+            "name": "email",
+            "label": "Email",
+            "type": "email",
+            "placeholder": "john@company.com",
+            "required": true
+          },
+          {
+            "name": "company",
+            "label": "Company",
+            "type": "text",
+            "placeholder": "Company name",
+            "required": true
+          }
+        ]
+      },
+      "services": {
+        "label": "What are you interested in?",
+        "description": "Select all that apply",
+        "options": [
+          {
+            "value": "process-analytics",
+            "label": "Process Analytics & Continuous Improvement"
+          },
+          {
+            "value": "sap-modernisation",
+            "label": "SAP Modernisation & Clean-Core"
+          },
+          {
+            "value": "enterprise-architecture",
+            "label": "Enterprise Architecture & Transformation Governance"
+          },
+          {
+            "value": "ai-governance",
+            "label": "AI Governance"
+          }
+        ]
+      },
+      "currentEnvironment": {
+        "label": "Current Environment",
+        "description": "What are you working with?",
+        "options": [
+          {
+            "value": "sap-ecc",
+            "label": "SAP ECC"
+          },
+          {
+            "value": "sap-s4hana",
+            "label": "SAP S/4HANA"
+          },
+          {
+            "value": "sap-btp",
+            "label": "SAP BTP"
+          },
+          {
+            "value": "signavio",
+            "label": "SAP Signavio / Process Mining"
+          },
+          {
+            "value": "databricks",
+            "label": "Databricks"
+          },
+          {
+            "value": "cloud",
+            "label": "Cloud Platforms (AWS, Azure, GCP)"
+          },
+          {
+            "value": "salesforce",
+            "label": "Salesforce"
+          },
+          {
+            "value": "workday",
+            "label": "Workday"
+          },
+          {
+            "value": "ea-practice",
+            "label": "Enterprise Architecture Practice"
+          },
+          {
+            "value": "leanix",
+            "label": "SAP LeanIX"
+          }
+        ]
+      },
+      "message": {
+        "label": "Additional Context (Optional)",
+        "placeholder": "Anything else you'd like us to know...",
+        "type": "textarea"
+      }
+    },
+    "submit": {
+      "text": "Send Message",
+      "submitting": "Sending...",
+      "success": "Thank you! We'll be in touch within 24-48 hours.",
+      "error": "Something went wrong. Please try again."
+    }
+  }
+}
+

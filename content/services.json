@@ -1,0 +1,195 @@
+{
+  "overview": {
+    "headline": "Four Service Areas. One Methodology.",
+    "content": "We help organizations translate process and data insights into measurable and governed value and improvement. Each service applies our disciplined approach: discovery that reveals reality, portfolios that prioritize value, and governance that ensures delivery."
+  },
+  "services": [
+    {
+      "id": "process-analytics",
+      "title": "Process Analytics & Continuous Improvement",
+      "tagline": "Make process behavior visible. Build a repeatable improvement loop.",
+      "icon": "Network",
+      "purpose": "Establish a repeatable, data-driven improvement loop for business-critical processes.",
+      "context": {
+        "headline": "Typical Context",
+        "points": [
+          "SAP-driven core processes (O2C, P2P, service, logistics, manufacturing)",
+          "Existing or planned use of process mining, Signavio, BI, or data platforms",
+          "Improvement initiatives driven by intuition rather than evidence"
+        ]
+      },
+      "delivers": {
+        "headline": "What This Delivers",
+        "points": [
+          "Clear visibility into actual process execution",
+          "Identified bottlenecks, rework, and structural inefficiencies",
+          "A prioritized improvement backlog (including automation and AI candidates)",
+          "Simple KPIs and monitoring for ongoing control"
+        ]
+      },
+      "howItWorks": {
+        "headline": "How It Works",
+        "description": "High-level approach to establishing process intelligence and continuous improvement:",
+        "steps": [
+          "Extract and structure event data from SAP and surrounding systems",
+          "Analyze flows, variants, delays, and exceptions",
+          "Translate findings into concrete improvement initiatives",
+          "Set up a lightweight review cadence to track outcomes"
+        ]
+      },
+      "value": {
+        "headline": "Value",
+        "points": [
+          "Moves discussions from opinion to fact",
+          "Creates transparency for management and process owners",
+          "Enables continuous improvement beyond one-off analysis"
+        ]
+      },
+      "tooling": {
+        "headline": "Tooling",
+        "tools": "SAP Signavio, SAP Business Data Cloud, Databricks, BI tools, custom event analytics"
+      }
+    },
+    {
+      "id": "sap-modernisation",
+      "title": "SAP Modernisation & Clean-Core Discovery",
+      "tagline": "Reduce complexity. Safeguard your SAP investment. Enable innovation.",
+      "icon": "TrendingUp",
+      "purpose": "Support SAP transformations by reducing complexity and enabling future innovation without destabilizing the core.",
+      "context": {
+        "headline": "Typical Context",
+        "points": [
+          "ECC or highly customized S/4HANA systems",
+          "Upcoming S/4HANA transformations or optimization phases",
+          "Difficulty upgrading or adopting new SAP innovations"
+        ]
+      },
+      "delivers": {
+        "headline": "What This Delivers",
+        "points": [
+          "Clear view of custom code, modifications, and process deviations using Plug and Gain analysis",
+          "Process House view with Best-Run Scores showing effectiveness of SAP processes",
+          "Pragmatic clean-core roadmap",
+          "Transaction analysis identifying harmonization opportunities and change management needs",
+          "Identification of extensions suited for SAP BTP or side-by-side architectures",
+          "Alignment between process design and system simplification"
+        ]
+      },
+      "howItWorks": {
+        "headline": "How It Works",
+        "description": "Systematic approach combining breadth and depth of analysis to identify complexity and define a path to clean-core:",
+        "steps": [
+          "Leverage SAP Signavio Plug and Gain approach—combining Process Insights (breadth: KPIs, benchmarks, Best-Run Scores) with Process Intelligence (depth: process mining, variant analysis) to compress discovery from months to days",
+          "Analyze customizations, transaction code usage (standard vs. custom), and process variants across your SAP landscape",
+          "Distinguish value-adding complexity from technical debt using fact-based metrics",
+          "Define pragmatic clean-core roadmap: where standard SAP fits, where BTP extensions add value, and what to retire",
+          "Support ongoing governance to prevent re-customization"
+        ]
+      },
+      "value": {
+        "headline": "Value",
+        "points": [
+          "Lower long-term maintenance effort",
+          "Faster upgrades and innovation cycles",
+          "Cleaner integration with analytics and AI platforms"
+        ]
+      },
+      "tooling": {
+        "headline": "Tooling",
+        "tools": "SAP S/4HANA, SAP BTP, Signavio Process Insights & Process Intelligence (Plug and Gain), LeanIX, SAP Business Data Cloud, Databricks"
+      }
+    },
+    {
+      "id": "enterprise-architecture",
+      "title": "Enterprise Architecture & Transformation Governance",
+      "tagline": "Structure for complex programs. Clarity without bureaucracy.",
+      "icon": "Shield",
+      "purpose": "Provide structure and clarity for complex transformation initiatives without slowing delivery.",
+      "context": {
+        "headline": "Typical Context",
+        "points": [
+          "Large SAP or data platform programs",
+          "Multiple workstreams with unclear architectural alignment",
+          "EA practices that exist but are not operationally effective"
+        ]
+      },
+      "delivers": {
+        "headline": "What This Delivers",
+        "points": [
+          "Clear architecture principles and decision guardrails",
+          "Practical architecture governance integrated into delivery",
+          "Coherent target architectures and roadmaps",
+          "Support for architects, PMOs, and transformation leads"
+        ]
+      },
+      "howItWorks": {
+        "headline": "How It Works",
+        "description": "Pragmatic approach to establishing architecture governance that enables rather than blocks:",
+        "steps": [
+          "Establish or stabilize architecture governance structures",
+          "Review key solution and integration designs",
+          "Ensure alignment between business goals, processes, and platforms",
+          "Support internal architects rather than replace them"
+        ]
+      },
+      "value": {
+        "headline": "Value",
+        "points": [
+          "Reduces architectural drift and rework",
+          "Improves decision transparency",
+          "Strengthens internal EA capability"
+        ]
+      },
+      "tooling": {
+        "headline": "Tooling",
+        "tools": "LeanIX, TOGAF-based methods, architecture repositories, standard collaboration tools"
+      }
+    },
+    {
+      "id": "ai-governance",
+      "title": "AI Governance & AI Agent Governance Foundations",
+      "tagline": "Enable AI adoption with accountability and control.",
+      "icon": "Target",
+      "purpose": "Enable AI adoption while maintaining accountability, control, and trust.",
+      "context": {
+        "headline": "Typical Context",
+        "points": [
+          "Growing number of AI or GenAI use cases",
+          "Concerns around risk, compliance, and uncontrolled automation",
+          "Introduction of autonomous or semi-autonomous AI agents"
+        ]
+      },
+      "delivers": {
+        "headline": "What This Delivers",
+        "points": [
+          "Clear AI governance principles and decision criteria",
+          "Defined ownership across the AI lifecycle",
+          "Integration of governance into data and ML platforms",
+          "Initial guardrails for AI agents and automation"
+        ]
+      },
+      "howItWorks": {
+        "headline": "How It Works",
+        "description": "Lightweight, operational approach to establishing AI governance without blocking innovation:",
+        "steps": [
+          "Assess current AI usage and risks",
+          "Define governance scope aligned with existing structures",
+          "Embed controls into ML and data platforms",
+          "Keep governance lightweight and operational"
+        ]
+      },
+      "value": {
+        "headline": "Value",
+        "points": [
+          "Enables innovation without losing oversight",
+          "Reduces regulatory and reputational risk",
+          "Prepares the organization for increasing AI autonomy"
+        ]
+      },
+      "tooling": {
+        "headline": "Tooling",
+        "tools": "Databricks (MLflow, Unity Catalog), data platforms, existing risk and compliance frameworks"
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "overview": {
+    "headline": "Our Methodology",
+    "subheadline": "Whether working on process optimization, SAP modernization, or AI governance, we follow a consistent approach that prioritizes business value and ensures execution."
+  },
+  "discovery": {
+    "number": "01",
+    "headline": "Discovery Sprints",
+    "tagline": "Data-Driven Analysis",
+    "duration": "4-6 Weeks",
+    "purpose": "Use process mining, event analytics, and data intelligence to uncover what's actually happening—not what you think is happening.",
+    "whatHappens": [
+      "Extract and analyze operational data (process logs, system events, transactions)",
+      "Identify bottlenecks, waste, rework, and automation candidates",
+      "Build a prioritized portfolio of improvements with estimated business value",
+      "Define ownership, KPIs, and next steps"
+    ],
+    "deliverables": [
+      "Process maps and analysis",
+      "Improvement opportunity list (ranked by value vs. effort)",
+      "Initial roadmap for next 3-6 months",
+      "Lightweight governance framework"
+    ],
+    "engagement": {
+      "duration": "4-6 weeks",
+      "scope": "Fixed scope, focused on one business area or process"
+    },
+    "bestFor": [
+      "Organizations new to process analytics",
+      "Testing approach before larger commitment",
+      "Specific pain points that need immediate attention"
+    ]
+  },
+  "portfolio": {
+    "number": "02",
+    "headline": "Portfolio Management",
+    "tagline": "Transparent Prioritization",
+    "purpose": "Transform findings into a transparent improvement pipeline with clear business value, effort estimates, and ownership.",
+    "description": "Whether it's process improvements, SAP clean-core initiatives, architecture decisions, or AI use cases—every opportunity becomes a transparent initiative. You see exactly what's delivering results and what's stuck.",
+    "features": [
+      "Clear business value for every initiative (time saved, cost reduced, risk mitigated)",
+      "Effort estimates and resource requirements",
+      "Ownership and accountability assignments",
+      "Status tracking and dependency management",
+      "Regular portfolio reviews and reprioritization"
+    ],
+    "outcomes": [
+      "Transparent view of all improvement initiatives",
+      "Value-based prioritization (not politics)",
+      "Clear accountability and ownership",
+      "Better resource allocation decisions"
+    ]
+  },
+  "governance": {
+    "number": "03",
+    "headline": "Fractional Leadership",
+    "tagline": "Continuous Oversight",
+    "duration": "Ongoing",
+    "purpose": "Provide fractional leadership to keep your portfolio moving. We maintain oversight, track KPIs, manage risks, and ensure initiatives actually ship—not just get discussed.",
+    "whatHappens": [
+      "Regular portfolio reviews (bi-weekly or monthly)",
+      "Track KPIs and initiative progress",
+      "Resolve blockers and manage risks",
+      "Maintain architecture and governance alignment",
+      "Guide teams on prioritization and execution"
+    ],
+    "commitment": {
+      "time": "0.5-2 days per week",
+      "duration": "3-12 month engagements"
+    },
+    "bestFor": [
+      "Organizations with multiple improvement initiatives",
+      "Need for ongoing architecture or governance oversight",
+      "Building internal capability over time"
+    ]
+  },
+  "valueTransparency": {
+    "headline": "Business Value Transparency",
+    "tagline": "Our Differentiator",
+    "description": "We make business value visible and trackable.",
+    "how": [
+      "Every initiative has clear value metrics (time saved, cost reduced, errors prevented)",
+      "Regular tracking of before/after results",
+      "Portfolio dashboards showing delivered value vs. pipeline",
+      "Honest assessment of what's working and what's not"
+    ],
+    "why": "Many organizations have lots of analysis and plans, but struggle to connect them to measurable outcomes. We keep value front and center throughout every engagement."
+  }
+}
+

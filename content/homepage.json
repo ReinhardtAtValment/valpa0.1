@@ -1,0 +1,284 @@
+{
+  "hero": {
+    "type": "carousel",
+    "slides": [
+      {
+        "id": "process-analytics",
+        "eyebrow": "Process Analytics & Continuous Improvement",
+        "title": {
+          "line1": "Make Process",
+          "line2": "Behavior Visible"
+        },
+        "description": "Establish data-driven improvement loops for SAP processes using process mining and event analytics. Move from intuition to evidence.",
+        "icon": "Network",
+        "gradient": "from-primary/20 to-secondary/20"
+      },
+      {
+        "id": "sap-modernisation",
+        "eyebrow": "SAP Modernisation & Clean-Core Discovery",
+        "title": {
+          "line1": "Reduce Complexity.",
+          "line2": "Safeguard SAP Value."
+        },
+        "description": "Support SAP transformations by identifying unnecessary customizations using the Plug and Gain approach. Create clean-core roadmaps that enable faster upgrades.",
+        "icon": "TrendingUp",
+        "gradient": "from-secondary/20 to-accent/20"
+      },
+      {
+        "id": "enterprise-architecture",
+        "eyebrow": "Enterprise Architecture & Transformation Governance",
+        "title": {
+          "line1": "Structure Without",
+          "line2": "Bureaucracy"
+        },
+        "description": "Provide architecture governance that strengthens delivery rather than slowing it down. Clear principles, practical guidance.",
+        "icon": "Shield",
+        "gradient": "from-accent/20 to-primary/20"
+      },
+      {
+        "id": "ai-governance",
+        "eyebrow": "AI Governance & AI Agent Governance",
+        "title": {
+          "line1": "Enable AI With",
+          "line2": "Accountability"
+        },
+        "description": "Establish governance for AI and GenAI use cases while maintaining oversight. Prepare for autonomous agents with proper guardrails.",
+        "icon": "Target",
+        "gradient": "from-primary/20 via-secondary/20 to-accent/20"
+      }
+    ],
+    "cta": {
+      "primary": {
+        "text": "Learn more about our approach",
+        "href": "/services"
+      },
+      "secondary": {
+        "text": "Start a conversation",
+        "href": "/contact"
+      }
+    }
+  },
+  "valueProposition": {
+    "challenge": {
+      "headline": "The Challenge Most Organizations Face",
+      "content": "Many organizations invest heavily in ERP systems, process mining tools, data platforms, and AI initiatives. Yet value creation remains fragmented. Dashboards exist, projects go live, but measurable improvement is elusive.\n\nThe gap isn't technology—it's execution."
+    },
+    "solution": {
+      "headline": "The Valment Difference",
+      "content": "Three integrated practices that work together—turning process intelligence into portfolios of clear initiatives, with value-driven governance and continuous oversight to ensure each delivers measurable business value.",
+      "points": [
+        {
+          "label": "Process intelligence",
+          "description": "that reveals what's actually happening (not what you think is happening)"
+        },
+        {
+          "label": "Portfolio management",
+          "description": "that prioritizes initiatives by business value"
+        },
+        {
+          "label": "Value-Driven Governance",
+          "description": "that ensures value is realized and sustained"
+        }
+      ],
+      "closing": "Our engagements are typically part-time and advisory, designed to strengthen your internal capability rather than create dependency."
+    }
+  },
+  "approach": {
+    "headline": "How We Work",
+    "subheadline": "A consistent methodology that prioritizes business value and ensures execution",
+    "steps": [
+      {
+        "number": "01",
+        "title": {
+          "line1": "Discovery That",
+          "line2": "Reveals Reality"
+        },
+        "description": "We use process mining, event analytics, and data intelligence to uncover what's actually happening—not what you think is happening. Identify bottlenecks, custom code complexity, architecture gaps, and AI governance risks hidden in your operations.",
+        "icon": "TrendingUp",
+        "stats": [
+          {
+            "label": "Process Variants Identified",
+            "value": "247"
+          },
+          {
+            "label": "Automation Opportunities",
+            "value": "34"
+          },
+          {
+            "label": "Potential Time Savings",
+            "value": "40%"
+          }
+        ],
+        "cta": {
+          "text": "Explore discovery sprints",
+          "href": "/approach#discovery"
+        }
+      },
+      {
+        "number": "02",
+        "title": {
+          "line1": "Portfolios That",
+          "line2": "Prioritize Value"
+        },
+        "description": "Whether it's process improvements, SAP clean-core initiatives, architecture decisions, or AI use cases—every opportunity becomes a transparent initiative with clear business value, effort estimates, and ownership. You see exactly what's delivering results.",
+        "icon": "Shield",
+        "stats": [
+          {
+            "label": "High Value",
+            "value": "12 Initiatives Ready"
+          },
+          {
+            "label": "In Progress",
+            "value": "8 Active Projects"
+          },
+          {
+            "label": "Backlog",
+            "value": "23 Opportunities"
+          }
+        ],
+        "cta": {
+          "text": "See portfolio approach",
+          "href": "/approach#portfolio"
+        }
+      },
+      {
+        "number": "03",
+        "title": {
+          "line1": "Governance That",
+          "line2": "Ensures Delivery"
+        },
+        "description": "Fractional leadership keeps your initiatives moving—whether process analytics, SAP modernization, EA alignment, or AI governance. We maintain oversight, track KPIs, manage risks, and ensure improvements actually ship—not just get discussed.",
+        "icon": "Zap",
+        "stats": [
+          {
+            "label": "Continuous Value",
+            "value": "0.5-2",
+            "unit": "Days per week"
+          }
+        ],
+        "statDescription": "Strategic guidance without full-time overhead",
+        "cta": {
+          "text": "Learn about fractional roles",
+          "href": "/approach#governance"
+        }
+      }
+    ]
+  },
+  "services": {
+    "headline": "Applied Across Four Service Areas",
+    "subheadline": "Whether you're optimizing SAP processes, modernizing your architecture, or governing AI adoption, we apply the same disciplined methodology to deliver measurable outcomes.",
+    "items": [
+      {
+        "id": "process-analytics",
+        "title": "Process Analytics & Continuous Improvement",
+        "tagline": "Make process behavior visible. Build a repeatable improvement loop.",
+        "description": "Establish data-driven improvement for business-critical SAP processes using process mining, event analytics, and BI tools. Move from intuition to evidence.",
+        "icon": "Network",
+        "outcomes": [
+          "Clear visibility into actual process execution",
+          "Prioritized improvement backlog (including automation and AI candidates)",
+          "Simple KPIs and monitoring for ongoing control"
+        ],
+        "tools": "SAP Signavio, SAP Business Data Cloud, Databricks, BI platforms",
+        "cta": {
+          "text": "Learn more",
+          "href": "/services#process-analytics"
+        }
+      },
+      {
+        "id": "sap-modernisation",
+        "title": "SAP Modernisation & Clean-Core Discovery",
+        "tagline": "Reduce complexity. Safeguard your SAP investment. Enable innovation.",
+        "description": "Support SAP transformations by identifying and eliminating unnecessary customizations using the Plug and Gain approach. Create pragmatic clean-core roadmaps that enable faster upgrades and innovation.",
+        "icon": "TrendingUp",
+        "outcomes": [
+          "Clear view of custom code and process deviations using Plug and Gain analysis",
+          "Process House view with Best-Run Scores and transaction analysis",
+          "Pragmatic clean-core roadmap",
+          "Lower long-term maintenance effort",
+          "Faster upgrade and innovation cycles"
+        ],
+        "tools": "SAP S/4HANA, SAP BTP, Signavio Process Insights & Process Intelligence (Plug and Gain), LeanIX, Business Data Cloud",
+        "cta": {
+          "text": "Learn more",
+          "href": "/services#sap-modernisation"
+        }
+      },
+      {
+        "id": "enterprise-architecture",
+        "title": "Enterprise Architecture & Transformation Governance",
+        "tagline": "Structure for complex programs. Clarity without bureaucracy.",
+        "description": "Provide architecture governance that strengthens delivery rather than slowing it down. Clear principles, practical guidance, and integration into your transformation approach.",
+        "icon": "Shield",
+        "outcomes": [
+          "Clear architecture principles and decision guardrails",
+          "Coherent target architectures and roadmaps",
+          "Reduced architectural drift and rework",
+          "Strengthened internal EA capability"
+        ],
+        "tools": "LeanIX, TOGAF-based methods, architecture repositories",
+        "cta": {
+          "text": "Learn more",
+          "href": "/services#enterprise-architecture"
+        }
+      },
+      {
+        "id": "ai-governance",
+        "title": "AI Governance & AI Agent Governance Foundations",
+        "tagline": "Enable AI adoption with accountability and control.",
+        "description": "Establish governance for AI and GenAI use cases while maintaining oversight and trust. Prepare for autonomous and semi-autonomous AI agents with proper guardrails.",
+        "icon": "Target",
+        "outcomes": [
+          "Clear AI governance principles and decision criteria",
+          "Integration of controls into ML and data platforms",
+          "Reduced regulatory and reputational risk",
+          "Guardrails for increasing AI autonomy"
+        ],
+        "tools": "Databricks (MLflow, Unity Catalog), data platforms, existing compliance frameworks",
+        "cta": {
+          "text": "Learn more",
+          "href": "/services#ai-governance"
+        }
+      }
+    ]
+  },
+  "credentials": {
+    "headline": "Experience & Credentials",
+    "intro": "Valment brings deep expertise in SAP-driven transformations, data platforms, and enterprise architecture. Founded by practitioners with global delivery experience across Europe, Asia, and North America.",
+    "certifications": [
+      {
+        "category": "SAP",
+        "items": ["Business Data Cloud", "BTP Solution Architect", "Signavio Process Management", "Signavio Process Analysis", "LeanIX Enterprise Architecture"]
+      },
+      {
+        "category": "Data & AI",
+        "items": ["Databricks GenAI Engineering", "Databricks ML Engineering", "IBM Data Science Professional", "IBM ML Professional"]
+      },
+      {
+        "category": "Architecture & Governance",
+        "items": ["TOGAF Enterprise Architecture", "LeanIX Enterprise Architecture", "OCEG GRCP (in progress)"]
+      }
+    ],
+    "background": [
+      "SAP solution and enterprise architecture",
+      "Process optimization and performance improvement",
+      "Data platforms and analytics",
+      "AI and ML implementations with governance"
+    ],
+    "differentiator": "Known for bridging strategy, process, and technology—working effectively with both senior leadership and technical teams."
+  },
+  "finalCta": {
+    "headline": "Ready to Turn Complexity Into Value?",
+    "description": "Let's discuss your process, SAP, architecture, or AI governance challenges.",
+    "cta": {
+      "primary": {
+        "text": "Start a conversation",
+        "href": "/contact"
+      },
+      "secondary": {
+        "text": "Explore our services",
+        "href": "/services"
+      }
+    }
+  }
+}

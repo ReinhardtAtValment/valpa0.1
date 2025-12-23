@@ -1,0 +1,145 @@
+{
+  "hero": {
+    "headline": "About Valment",
+    "subheadline": "Bridging strategy, process, and technology to deliver measurable business value."
+  },
+  "profile": {
+    "headline": "Who We Are",
+    "intro": "Valment Partners helps organizations turn process, data, and architecture insights into measurable business value. Founded by practitioners with deep expertise in SAP-driven transformations, data platforms, and enterprise architecture, we work with senior leadership and technical teams to deliver practical, governed improvement.",
+    "mission": "Our mission is simple: make business value visible, trackable, and sustainable. Whether you're optimizing SAP processes, modernizing your architecture, or governing AI adoption, we apply the same disciplined methodology to ensure execution and results.",
+    "approach": "We typically engage part-time and advisory, designed to strengthen your internal capability rather than create dependency. Most engagements are 0.5-2 days per week, focused on discovery sprints, portfolio management, and fractional leadership.",
+    "experience": "Extensive global experience delivering transformations across Europe, Asia, and North America. Industries served include automotive, manufacturing, professional services, and technology."
+  },
+  "certifications": {
+    "headline": "Certifications & Credentials",
+    "intro": "Professional certifications across SAP, data platforms, AI, and enterprise architecture.",
+    "categories": [
+      {
+        "category": "SAP",
+        "icon": "Database",
+        "items": [
+          "SAP Business Data Cloud",
+          "SAP BTP Solution Architect",
+          "SAP Signavio Process Management",
+          "SAP Signavio Process Analysis",
+          "LeanIX Enterprise Architecture"
+        ]
+      },
+      {
+        "category": "Data & AI",
+        "icon": "Brain",
+        "items": [
+          "Databricks GenAI Engineering",
+          "Databricks ML Engineering",
+          "IBM Data Science Professional",
+          "IBM ML Professional"
+        ]
+      },
+      {
+        "category": "Architecture & Governance",
+        "icon": "Shield",
+        "items": [
+          "TOGAF Enterprise Architecture",
+          "LeanIX Enterprise Architecture",
+          "OCEG GRCP (in progress)"
+        ]
+      }
+    ]
+  },
+  "expertise": {
+    "headline": "Technical Expertise",
+    "intro": "Deep capabilities across four interconnected domains.",
+    "areas": [
+      {
+        "title": "Process & Operations",
+        "icon": "Network",
+        "description": "Process mining and optimization using SAP Signavio, event analytics, and BI platforms. Building continuous improvement loops for business-critical processes.",
+        "capabilities": [
+          "Process mining and discovery",
+          "Process optimization and redesign",
+          "Continuous improvement frameworks",
+          "Operational excellence programs",
+          "Event analytics and monitoring"
+        ],
+        "tools": "SAP Signavio, SAP Business Data Cloud, Databricks, BI platforms"
+      },
+      {
+        "title": "SAP Landscape",
+        "icon": "Database",
+        "description": "S/4HANA modernization, clean-core architecture, and BTP extensions. Supporting SAP transformations by reducing complexity and enabling innovation.",
+        "capabilities": [
+          "S/4HANA transformation and optimization",
+          "Clean-core architecture and custom code analysis",
+          "SAP BTP solution architecture",
+          "Signavio Process Intelligence and Plug and Gain",
+          "SAP analytics and reporting (SAC, Business Data Cloud)"
+        ],
+        "tools": "SAP S/4HANA, SAP BTP, Signavio, LeanIX, Business Data Cloud"
+      },
+      {
+        "title": "Data Platforms",
+        "icon": "BarChart3",
+        "description": "Lakehouse architecture, data governance, and analytics platforms. Building scalable data foundations for process intelligence and AI.",
+        "capabilities": [
+          "Databricks lakehouse architecture",
+          "Data governance and quality frameworks",
+          "Event analytics and streaming",
+          "Data integration and ETL/ELT",
+          "Analytics and BI implementation"
+        ],
+        "tools": "Databricks, Unity Catalog, Delta Lake, event streaming platforms"
+      },
+      {
+        "title": "AI & Automation",
+        "icon": "Sparkles",
+        "description": "GenAI applications, ML operations, and AI governance. Enabling responsible AI adoption with proper oversight and control.",
+        "capabilities": [
+          "GenAI use case design and implementation",
+          "ML operations and model governance",
+          "AI governance frameworks",
+          "Agentic AI and autonomous systems",
+          "Responsible AI and ethics"
+        ],
+        "tools": "Databricks (MLflow, GenAI), SAP AI Core, governance frameworks"
+      }
+    ]
+  },
+  "industries": {
+    "headline": "Industry Experience",
+    "intro": "Extensive global experience delivering transformations across multiple industries and regions.",
+    "sectors": [
+      {
+        "name": "Automotive",
+        "description": "Vehicle production, supply chain optimization, and quality management systems"
+      },
+      {
+        "name": "Manufacturing",
+        "description": "Complex production processes, quality control, and operational excellence"
+      },
+      {
+        "name": "Professional Services",
+        "description": "Project-driven operations, resource management, and service delivery"
+      },
+      {
+        "name": "Technology",
+        "description": "Fast-paced innovation, agile delivery, and platform development"
+      }
+    ],
+    "regions": [
+      "Europe",
+      "Asia",
+      "North America"
+    ]
+  },
+  "differentiator": {
+    "headline": "What Makes Us Different",
+    "description": "Known for bridging strategy, process, and technology—working effectively with both senior leadership and technical teams.",
+    "points": [
+      "We focus on measurable business value, not just analysis or recommendations",
+      "We strengthen your internal capability rather than create dependency",
+      "We bring technical depth combined with business context",
+      "We provide honest assessment of what's working and what's not"
+    ]
+  }
+}
+
