@@ -74,3 +74,4 @@ npm run dev
 Your template is now ready to use for all future projects!
 
 
+

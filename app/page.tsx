@@ -1,23 +1,22 @@
-import { HeroCarousel } from "@/components/sections/heroes/hero-carousel";
-import { 
-  ValueProposition,
-  Approach,
-  ServicesOverview,
-  Credentials,
-  FinalCta 
-} from "@/components/sections";
+import { HeroStatic } from "@/components/sections/heroes/hero-static";
+import { BuiltFor } from "@/components/sections/built-for";
+import { HowWeWork } from "@/components/sections/how-we-work";
+import { Offers } from "@/components/sections/offers";
+import { FocusAreas } from "@/components/sections/focus-areas";
+import { WhyValment } from "@/components/sections/why-valment";
+import { FinalCtaNew } from "@/components/sections/final-cta-new";
 import { SectionNav } from "@/components/layout/section-nav";
 
-// Import homepage content from JSON
 import homepageContent from "@/content/homepage.json";
 
 // Define sections for navigation
 const sections = [
   { id: "hero", label: "Home" },
-  { id: "value-proposition", label: "Our Difference" },
-  { id: "approach", label: "How We Work" },
-  { id: "services", label: "Services" },
-  { id: "credentials", label: "Experience" },
+  { id: "built-for", label: "Who We Help" },
+  { id: "how-we-work", label: "How We Work" },
+  { id: "focus-areas", label: "Service Areas" },
+  { id: "offers", label: "Ways to Work" },
+  { id: "why-valment", label: "Why Valment" },
   { id: "contact-cta", label: "Contact" },
 ];
 
@@ -27,55 +26,39 @@ export default function Home() {
       {/* Floating section navigation */}
       <SectionNav sections={sections} />
 
-      {/* Hero Carousel - 4 rotating slides showing the 4 services */}
+      {/* Hero - New static hero with 3 capability tiles */}
       <div id="hero">
-        <HeroCarousel />
+        <HeroStatic />
       </div>
 
-      {/* Value Proposition - Challenge + Solution */}
-      <div id="value-proposition">
-        <ValueProposition
-          challenge={homepageContent.valueProposition.challenge}
-          solution={homepageContent.valueProposition.solution}
-        />
+      {/* Built For - Target personas and tools */}
+      <div id="built-for">
+        <BuiltFor />
       </div>
 
-      {/* Our Approach - 3-step methodology with visual cards */}
-      <div id="approach">
-        <Approach
-          headline={homepageContent.approach.headline}
-          subheadline={homepageContent.approach.subheadline}
-          steps={homepageContent.approach.steps}
-        />
+      {/* How We Work - 3-step methodology */}
+      <div id="how-we-work">
+        <HowWeWork />
       </div>
 
-      {/* Services Overview - 4 service cards */}
-      <div id="services">
-        <ServicesOverview
-          headline={homepageContent.services.headline}
-          subheadline={homepageContent.services.subheadline}
-          items={homepageContent.services.items}
-        />
+      {/* Focus Areas - 4 service areas */}
+      <div id="focus-areas">
+        <FocusAreas />
       </div>
 
-      {/* Credentials - Experience & certifications */}
-      <div id="credentials">
-        <Credentials
-          headline={homepageContent.credentials.headline}
-          intro={homepageContent.credentials.intro}
-          certifications={homepageContent.credentials.certifications}
-          background={homepageContent.credentials.background}
-          differentiator={homepageContent.credentials.differentiator}
-        />
+      {/* Offers - Three engagement formats */}
+      <div id="offers">
+        <Offers />
+      </div>
+
+      {/* Why Valment - 4 differentiators */}
+      <div id="why-valment">
+        <WhyValment certifications={homepageContent.credentials.certifications} />
       </div>
 
       {/* Final CTA */}
       <div id="contact-cta">
-        <FinalCta
-          headline={homepageContent.finalCta.headline}
-          description={homepageContent.finalCta.description}
-          cta={homepageContent.finalCta.cta}
-        />
+        <FinalCtaNew />
       </div>
     </>
   );

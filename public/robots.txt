@@ -1,0 +1,6 @@
+# robots.txt for Valment
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.valment.com/sitemap.xml

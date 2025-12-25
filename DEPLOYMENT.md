@@ -1,186 +1,157 @@
-# Deployment Instructions
+# Deployment Instructions for Hostinger
 
-## Upload to GitHub
+## Problem Fixed
+- Homepage works but subpages get 403 errors
+- This is because Next.js static export needs proper routing configuration
 
-### Option 1: Using GitHub CLI (Recommended)
+## What Changed
 
-1. **Install GitHub CLI** (if not already installed):
-   - Download from: https://cli.github.com/
-   
-2. **Authenticate with GitHub**:
-   ```bash
-   gh auth login
-   ```
+### 1. Next.js Config (`next.config.mjs`)
+- Added `trailingSlash: true` 
+- This makes Next.js create `/services/index.html` instead of `/services.html`
+- Better compatibility with traditional hosting
 
-3. **Create and push repository**:
-   ```bash
-   # Create a new GitHub repository and push
-   gh repo create valpa0.1 --public --source=. --remote=origin --push
-   
-   # Or for private repository:
-   gh repo create valpa0.1 --private --source=. --remote=origin --push
-   ```
+### 2. Created `.htaccess` file
+- Handles clean URLs (e.g., `/services` → `/services/index.html`)
+- Forces HTTPS
+- Prevents 403 errors on subpages
+- Sets up caching and security headers
 
-### Option 2: Using GitHub Web Interface
+### 3. Added 404 page
+- Custom error page for missing URLs
 
-1. **Create a new repository on GitHub**:
-   - Go to https://github.com/new
-   - Repository name: `valpa0.1`
-   - Choose Public or Private
-   - **DO NOT** initialize with README, .gitignore, or license (we already have these)
-   - Click "Create repository"
+## Deploy Steps
 
-2. **Connect and push your local repository**:
-   ```bash
-   # Add GitHub as remote origin (replace YOUR_USERNAME with your GitHub username)
-   git remote add origin https://github.com/YOUR_USERNAME/valpa0.1.git
-   
-   # Verify remote was added
-   git remote -v
-   
-   # Push to GitHub
-   git push -u origin main
-   ```
-
-### Option 3: Using SSH (More Secure)
-
-1. **Set up SSH key** (if not already done):
-   ```bash
-   # Generate SSH key
-   ssh-keygen -t ed25519 -C "your_email@example.com"
-   
-   # Copy public key to clipboard (Windows)
-   type "$env:USERPROFILE\.ssh\id_ed25519.pub" | clip
-   ```
-
-2. **Add SSH key to GitHub**:
-   - Go to GitHub Settings → SSH and GPG keys → New SSH key
-   - Paste your key and save
-
-3. **Create repository and push**:
-   ```bash
-   # Add remote using SSH
-   git remote add origin git@github.com:YOUR_USERNAME/valpa0.1.git
-   
-   # Push to GitHub
-   git push -u origin main
-   ```
-
-## Upload to GitLab
-
+### Step 1: Build New Static Export
 ```bash
-# Create repository on GitLab first, then:
-git remote add origin https://gitlab.com/YOUR_USERNAME/valpa0.1.git
-git push -u origin main
+npm run build
 ```
 
-## Upload to Bitbucket
+This will create a fresh `/out` folder with:
+- Proper directory structure
+- All pages as `/page-name/index.html`
+- The new `.htaccess` file
+- `robots.txt` and `sitemap.xml`
 
-```bash
-# Create repository on Bitbucket first, then:
-git remote add origin https://bitbucket.org/YOUR_USERNAME/valpa0.1.git
-git push -u origin main
+### Step 2: Upload to Hostinger
+
+**Upload ALL contents from the `/out` folder to `public_html/`:**
+
+```
+out/
+├── index.html              → public_html/index.html
+├── .htaccess              → public_html/.htaccess
+├── robots.txt             → public_html/robots.txt
+├── sitemap.xml            → public_html/sitemap.xml
+├── 404.html               → public_html/404.html
+├── services/
+│   └── index.html         → public_html/services/index.html
+├── approach/
+│   └── index.html         → public_html/approach/index.html
+├── about/
+│   └── index.html         → public_html/about/index.html
+├── contact/
+│   └── index.html         → public_html/contact/index.html
+├── _next/                 → public_html/_next/
+└── ... (all other files)
 ```
 
-## Deploy to Vercel (Recommended for Next.js)
+**IMPORTANT:** 
+- Make sure `.htaccess` is uploaded (it's hidden, starts with a dot)
+- In FileZilla/FTP client: enable "Show hidden files"
+- Verify it exists: `public_html/.htaccess`
 
-### Option 1: Using Vercel CLI
+### Step 3: Test
 
-1. **Install Vercel CLI**:
-   ```bash
-   npm install -g vercel
-   ```
-
-2. **Deploy**:
-   ```bash
-   vercel
-   ```
-
-### Option 2: Using Vercel Web Interface
-
-1. Push your code to GitHub first (see above)
-2. Go to https://vercel.com/new
-3. Import your GitHub repository
-4. Vercel will auto-detect Next.js and configure everything
-5. Click "Deploy"
-
-Your app will be live at: `https://valpa01.vercel.app` (or similar)
-
-## Deploy to Netlify
-
-1. Push code to GitHub first
-2. Go to https://app.netlify.com/start
-3. Connect to your Git provider
-4. Select your repository
-5. Build settings:
-   - Build command: `npm run build`
-   - Publish directory: `.next`
-6. Click "Deploy site"
-
-## Environment Variables
-
-If you need environment variables for deployment:
-
-1. Create `.env.local` for local development (already in .gitignore)
-2. For production, add environment variables in your hosting platform:
-   - **Vercel**: Project Settings → Environment Variables
-   - **Netlify**: Site Settings → Environment Variables
-   - **GitHub**: Repository Settings → Secrets and variables → Actions
-
-## Common Git Commands
-
+Test all pages:
 ```bash
-# Check status
-git status
-
-# View commit history
-git log --oneline
-
-# Create a new branch
-git checkout -b feature/new-feature
-
-# Switch branches
-git checkout main
-
-# Add specific files
-git add file1.txt file2.txt
-
-# Commit changes
-git commit -m "Your commit message"
-
-# Push changes
-git push
-
-# Pull latest changes
-git pull
-
-# View remote repositories
-git remote -v
+curl -I https://www.valment.com/
+curl -I https://www.valment.com/services/
+curl -I https://www.valment.com/approach/
+curl -I https://www.valment.com/about/
+curl -I https://www.valment.com/contact/
 ```
+
+All should return `200 OK` (not 403).
+
+Also test in browser:
+- https://www.valment.com
+- https://www.valment.com/services
+- https://www.valment.com/approach
+- https://www.valment.com/about
+- https://www.valment.com/contact
+
+### Step 4: Verify SEO Files
+
+Check these URLs work:
+- https://www.valment.com/robots.txt
+- https://www.valment.com/sitemap.xml
 
 ## Troubleshooting
 
-### "Failed to push some refs"
-```bash
-# Pull the latest changes first
-git pull origin main --rebase
+### If subpages still get 403:
 
-# Then push again
-git push origin main
+**Option 1: Simplify .htaccess**
+
+Replace the `.htaccess` content with this minimal version:
+
+```apache
+RewriteEngine On
+RewriteBase /
+
+# Serve index.html for directories
+DirectoryIndex index.html
+
+# Handle clean URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.*)$ /$1/index.html [L]
 ```
 
-### "Remote origin already exists"
-```bash
-# Remove existing remote
-git remote remove origin
+**Option 2: Check file permissions**
 
-# Add the correct remote
-git remote add origin YOUR_REPO_URL
+In Hostinger hPanel:
+- Use "Fix File Ownership" tool
+- Set directories to 755
+- Set files to 644
+
+**Option 3: Disable ModSecurity (if active)**
+
+Add to top of `.htaccess`:
+```apache
+<IfModule mod_security.c>
+  SecFilterEngine Off
+</IfModule>
 ```
 
-### Change remote URL
-```bash
-git remote set-url origin NEW_URL
-```
+## What This Fixes
 
+✅ Homepage accessible  
+✅ All subpages accessible (no more 403)  
+✅ Clean URLs work (`/services` instead of `/services.html`)  
+✅ HTTPS redirect  
+✅ Proper caching  
+✅ Google can crawl all pages  
+✅ LinkedIn previews work  
+
+## Next Steps After Deployment
+
+1. **Google Search Console**
+   - Add property: https://www.valment.com
+   - Submit sitemap: https://www.valment.com/sitemap.xml
+   - Request indexing for all 5 pages
+
+2. **Test Social Media Previews**
+   - LinkedIn: https://www.linkedin.com/post-inspector/
+   - Facebook: https://developers.facebook.com/tools/debug/
+   - Twitter: https://cards-dev.twitter.com/validator
+
+3. **Monitor**
+   - Check Google Search Console for crawl errors
+   - Verify all pages indexed within 1-2 weeks
 

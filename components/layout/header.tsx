@@ -59,8 +59,8 @@ export function Header() {
             </button>
           </div>
 
-          {/* Desktop navigation */}
-          <div className="hidden lg:flex lg:gap-x-8">
+          {/* Desktop navigation - Right aligned */}
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -70,16 +70,6 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-          </div>
-
-          {/* CTA button */}
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link
-              href="/contact"
-              className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground hover:bg-accent-600 transition-colors"
-            >
-              Get Started
-            </Link>
           </div>
         </nav>
       </header>
@@ -129,15 +119,6 @@ export function Header() {
                       {item.name}
                     </Link>
                   ))}
-                </div>
-                <div className="py-6">
-                  <Link
-                    href="/contact"
-                    className="block w-full rounded-md bg-accent px-4 py-2.5 text-center text-base font-semibold text-accent-foreground hover:bg-accent-600 transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Get Started
-                  </Link>
                 </div>
               </div>
             </div>

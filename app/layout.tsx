@@ -10,8 +10,36 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Valment | Process Optimization & AI Governance",
-  description: "We help organizations optimize processes through data-driven discovery, identifying portfolios of improvements and AI agent opportunities—then govern and control that portfolio to deliver measurable business value.",
+  title: "Valment | Process & Data Intelligence for SAP Transformations",
+  description: "Process analytics and data intelligence for SAP-driven organizations. Signavio process mining, SAP BTP/BDC modernization, Databricks platforms, and AI governance. Discover, prioritize, and deliver measurable business value.",
+  metadataBase: new URL('https://www.valment.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "Valment | Process & Data Intelligence for SAP Transformations",
+    description: "Process analytics and data intelligence for SAP-driven organizations. Signavio process mining, SAP BTP/BDC modernization, Databricks platforms, and AI governance.",
+    url: 'https://www.valment.com',
+    siteName: 'Valment',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Valment | Process & Data Intelligence for SAP Transformations",
+    description: "Process analytics and data intelligence for SAP-driven organizations. Signavio, SAP BTP/BDC, Databricks, and AI governance.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
