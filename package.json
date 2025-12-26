@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "buildstatic": "powershell -Command \"Remove-Item Env:__NEXT_PRIVATE_STANDALONE_CONFIG -ErrorAction SilentlyContinue; Remove-Item Env:__NEXT_PRIVATE_ORIGIN -ErrorAction SilentlyContinue; Remove-Item Env:NEXT_DEPLOYMENT_ID -ErrorAction SilentlyContinue; Remove-Item Env:__NEXT_PRIVATE_RUNTIME_TYPE -ErrorAction SilentlyContinue; Remove-Item Env:NEXT_OTEL_FETCH_DISABLED -ErrorAction SilentlyContinue; npm run build\"",
     "start": "next start",
     "lint": "eslint"
   },

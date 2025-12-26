@@ -26,39 +26,73 @@ export default function Home() {
       {/* Floating section navigation */}
       <SectionNav sections={sections} />
 
-      {/* Hero - New static hero with 3 capability tiles */}
+      {/* Hero - Static hero with 3 capability tiles */}
       <div id="hero">
-        <HeroStatic />
+        <HeroStatic
+          headline={homepageContent.heroStatic.headline}
+          subheadline={homepageContent.heroStatic.subheadline}
+          tiles={homepageContent.heroStatic.tiles}
+          cta={homepageContent.heroStatic.cta}
+          microLine={homepageContent.heroStatic.microLine}
+        />
       </div>
 
       {/* Built For - Target personas and tools */}
       <div id="built-for">
-        <BuiltFor />
+        <BuiltFor
+          headline={homepageContent.builtFor.headline}
+          intro={homepageContent.builtFor.intro}
+          personas={homepageContent.builtFor.personas}
+          tools={homepageContent.builtFor.tools}
+        />
       </div>
 
       {/* How We Work - 3-step methodology */}
       <div id="how-we-work">
-        <HowWeWork />
+        <HowWeWork
+          headline={homepageContent.howWeWork.headline}
+          intro={homepageContent.howWeWork.intro}
+          steps={homepageContent.howWeWork.steps}
+          closingLine={homepageContent.howWeWork.closingLine}
+        />
       </div>
 
       {/* Focus Areas - 4 service areas */}
       <div id="focus-areas">
-        <FocusAreas />
+        <FocusAreas
+          headline={homepageContent.focusAreas.headline}
+          intro={homepageContent.focusAreas.intro}
+          areas={homepageContent.focusAreas.areas}
+        />
       </div>
 
       {/* Offers - Three engagement formats */}
       <div id="offers">
-        <Offers />
+        <Offers
+          headline={homepageContent.offers.headline}
+          intro={homepageContent.offers.intro}
+          items={homepageContent.offers.items}
+        />
       </div>
 
-      {/* Why Valment - 4 differentiators */}
+      {/* Why Valment - 4 differentiators + certifications */}
       <div id="why-valment">
-        <WhyValment certifications={homepageContent.credentials.certifications} />
+        <WhyValment
+          headline={homepageContent.whyValment.headline}
+          intro={homepageContent.whyValment.intro}
+          differentiators={homepageContent.whyValment.differentiators}
+          closingLine={homepageContent.whyValment.closingLine}
+          certifications={homepageContent.credentials.certifications}
+        />
       </div>
 
       {/* Final CTA */}
       <div id="contact-cta">
-        <FinalCtaNew />
+        <FinalCtaNew
+          headline={homepageContent.finalCta.headline}
+          description={homepageContent.finalCta.description}
+          cta={homepageContent.finalCta.cta}
+        />
       </div>
     </>
   );

@@ -26,8 +26,8 @@
             "name": "company",
             "label": "Company",
             "type": "text",
-            "placeholder": "Company name",
-            "required": true
+            "placeholder": "Company name (optional)",
+            "required": false
           }
         ]
       },

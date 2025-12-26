@@ -15,254 +15,408 @@ I'm continuing work on the Valment Partners Inc. website project. This is a prof
 - Use Filesystem tools to access files at this path
 - Reference docs in the Claude Project context for business information
 
-## Current Project Status
+## Current Project Status (December 25, 2024)
 
-### ✅ Completed (Production Ready)
-- **All 5 core pages are complete:** Homepage, Services, Approach, About, Contact
-- **20+ reusable components** built and documented
-- **5 JSON content files** for easy content management
-- **Comprehensive documentation** in `docs/` folder
-- **Total code:** ~6,000+ lines, zero duplication, 100% TypeScript
+### ✅ Recently Completed - Homepage Architecture Refactor
 
-### 🎨 Recent Changes (Last Session)
-1. **Hero Carousel Redesign:**
-   - Changed from full-screen overlay design to stunning card-based carousel
-   - Cards look like browser windows/screens with peek effect showing multiple slides
-   - Fixed mobile issues (text hitting borders, overlaying navigation)
-   - Made cards larger (90vw mobile, up to 950px desktop)
-   - Added simple header: "Creating Sustainable Value"
-   - Touch/swipe enabled for mobile
-   - File: `C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\components\sections\heroes\hero-carousel.tsx`
+**Major Changes in Last Session:**
+1. **Complete Homepage Redesign:**
+   - Replaced carousel hero with static hero + 3 capability tiles
+   - Created 7 new sections with consistent tile-based design
+   - Removed old redundant sections (old value prop, old approach, old services overview, standalone credentials, old CTA)
+   - New section order optimized for conversion
 
-2. **SEO & Deployment Fixes:**
-   - Enhanced metadata in `app/layout.tsx` with Open Graph, Twitter cards
-   - Created `robots.txt` and `sitemap.xml` in `public/`
-   - Created `.htaccess` file for Apache/Hostinger hosting
-   - Fixed 403 errors on subpages (routing issue with static export)
-   - Added `trailingSlash: true` to `next.config.mjs`
-   - Created custom 404 page
-   - All files ready in `public/` for next deployment
+2. **Proper JSON Architecture Implemented:**
+   - **CRITICAL FIX:** All content now in `/content/homepage.json` as single source of truth
+   - All 7 components refactored to accept props (zero hardcoded content)
+   - Fixed sloppy development where content was scattered across files
+   - Maintainable: Update content = edit ONE file
 
-### 🚀 Current Deployment Status
-- **Hosting:** Hostinger (Apache server)
-- **Domain:** www.valment.com
-- **Issue:** Subpages getting 403 errors (homepage works)
-- **Solution:** Created `.htaccess` file, needs rebuild and re-upload
-- **Next step:** User needs to run `npm run build` and upload `/out` folder contents to `public_html/`
+3. **Components Fixed:**
+   - Fixed icon rendering bug in `how-we-work.tsx` (was calling icons as functions instead of JSX)
+   - All components now properly typed with TypeScript interfaces
+   - Consistent icon map pattern across all components
+
+4. **Site Structure Simplified:**
+   - Changed from 5 pages to 4 pages
+   - Merged planned Expertise page content into About page
+   - Navigation: Home, Services, Approach, About, Contact
+
+5. **Deployment Configuration:**
+   - Updated `.htaccess` with aggressive no-cache headers for HTML files
+   - Static assets cached for 1 year
+   - HTML files never cached to prevent bot/browser caching issues
+
+### 🎯 Current Homepage Sections (7 Total)
+
+**Section Order:**
+1. **Hero (Static)** - "Build lasting capabilities..." + 3 capability tiles
+2. **Built For** - 3 target personas + tools box
+3. **How We Deliver Results** - 3-step methodology with alternating layouts
+4. **Where We Apply the Approach** - 4 service area tiles (2x2 grid)
+5. **Ways to Work Together** - 3 engagement format tiles
+6. **Why Valment** - 4 differentiators + 3 certification tiles
+7. **Final CTA** - Clean white section with 2 buttons
+
+### 📁 Homepage Component Files
+
+**All components properly structured to read from JSON:**
+
+```
+components/sections/
+├── heroes/
+│   ├── hero-static.tsx          ✅ Props: headline, subheadline, tiles, cta, microLine
+│   └── hero-carousel.tsx        ✅ Preserved for potential reuse
+├── built-for.tsx                ✅ Props: headline, intro, personas, tools
+├── how-we-work.tsx              ✅ Props: headline, steps, closingLine (FIXED icon rendering)
+├── focus-areas.tsx              ✅ Props: headline, intro, areas
+├── offers.tsx                   ✅ Props: headline, intro, items
+├── why-valment.tsx              ✅ Props: headline, intro, differentiators, closingLine, certifications
+└── final-cta-new.tsx            ✅ Props: headline, description, cta
+```
+
+**Key Pattern:**
+- Component defines TypeScript interface for props
+- Component accepts props destructured from JSON
+- Icon map at top of each component file
+- Zero hardcoded content anywhere
+
+### 🗂️ Content Architecture
+
+**Single Source of Truth:**
+```
+content/homepage.json
+├── heroStatic          → hero-static.tsx
+├── builtFor            → built-for.tsx
+├── howWeWork           → how-we-work.tsx
+├── focusAreas          → focus-areas.tsx
+├── offers              → offers.tsx
+├── whyValment          → why-valment.tsx
+├── credentials         → (used by why-valment.tsx)
+└── finalCta            → final-cta-new.tsx
+```
+
+**To update ANY homepage content:**
+1. Edit `/content/homepage.json`
+2. Run `npm run build`
+3. Upload `/out` folder to Hostinger
+4. Done!
+
+### 🚀 Deployment Status
+
+**Ready for Production:**
+- ✅ All components verified clean (no old content)
+- ✅ All components accept props from JSON
+- ✅ Icon rendering fixed
+- ✅ Mobile responsive design maintained
+- ✅ Caching headers configured in `.htaccess`
+
+**Current Live Site:**
+- Domain: www.valment.com
+- Shows: "Build lasting capabilities in process, data, and governance." ✅
+- All new sections loading correctly ✅
+
+**Deployment Process:**
+```bash
+# 1. Build
+npm run build
+
+# 2. Upload /out folder contents to public_html/
+
+# 3. Clear Hostinger cache (if available in hPanel)
+
+# 4. Test
+curl -I https://www.valment.com/
+# Should see: Cache-Control: no-cache, no-store, must-revalidate
+```
 
 ## Project Structure
 
 ```
 C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\
-├── app/                    # Next.js pages
-│   ├── page.tsx           # Homepage
-│   ├── services/page.tsx  # Services page
-│   ├── approach/page.tsx  # Approach page
-│   ├── about/page.tsx     # About page
+├── app/                    # Next.js pages (4 pages total)
+│   ├── page.tsx           # Homepage (7 sections, all from JSON)
+│   ├── services/page.tsx  # Services page (complete)
+│   ├── approach/page.tsx  # Approach page (complete)
+│   ├── about/page.tsx     # About page (merged with expertise content)
 │   ├── contact/page.tsx   # Contact page (with form)
 │   └── layout.tsx         # Root layout with metadata
 ├── components/
-│   ├── ui/                # Reusable UI components (Section, Card, Button, etc.)
+│   ├── ui/                # Reusable UI components
 │   ├── layout/            # Header, Footer, SectionNav
-│   └── sections/          # Page sections (HeroCarousel, ValueProposition, etc.)
-├── content/               # JSON content files (5 files)
-│   ├── homepage.json
+│   └── sections/          # Page sections (all accept props from JSON)
+├── content/               # JSON content files (SINGLE SOURCE OF TRUTH)
+│   ├── homepage.json      ✅ All 7 sections + credentials
 │   ├── services.json
 │   ├── approach.json
 │   ├── about.json
 │   └── contact.json
-├── docs/                  # Comprehensive documentation (16 files)
-│   ├── README.md
-│   ├── CURRENT-STATE.md
-│   ├── COMPLETION-SUMMARY.md
-│   ├── DESIGN-SYSTEM.md
-│   ├── PROJECT-CONTEXT.md
-│   ├── NEXT-STEPS.md
-│   └── HANDOFF-INSTRUCTIONS.md
-├── public/                # Static files
-│   ├── .htaccess         # Apache routing rules (NEW)
-│   ├── robots.txt        # SEO (NEW)
-│   ├── sitemap.xml       # SEO (NEW)
-│   └── 404.html          # Custom error page (NEW)
-├── CONTINUATION-PROMPT.md # This file
-├── DEPLOYMENT.md          # Deployment instructions
-└── next.config.mjs        # Next.js config with static export
+├── public/
+│   ├── .htaccess          # Apache routing + caching headers
+│   ├── robots.txt         # SEO
+│   ├── sitemap.xml        # SEO
+│   └── favicon.ico
+└── docs/                  # Comprehensive documentation
 ```
 
-## How to Access Files in Next Chat
+## Design System
 
-**Read documentation:**
-```
-Use Filesystem:read_text_file tool with path:
-C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\docs\README.md
-C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\docs\CURRENT-STATE.md
-C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\DEPLOYMENT.md
-```
+**Colors:**
+- Primary: Navy blue (blue-600 to blue-900)
+- Secondary: Deep teal (teal-600 to teal-700)
+- Accent: Amber (amber-500)
+- Additional: Purple-to-pink gradient for AI services
 
-**List directory contents:**
-```
-Use Filesystem:list_directory tool with path:
-C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\components
-```
+**Icon Gradients (Consistent Pattern):**
+- Blue/Teal: `from-blue-600 to-teal-600`
+- Teal/Blue: `from-teal-600 to-blue-700`
+- Amber/Orange: `from-amber-500 to-orange-600`
+- Purple/Pink: `from-purple-600 to-pink-600`
 
-**Edit files:**
-```
-Use Filesystem:edit_file or Filesystem:write_file tools
-```
+**Typography:** 
+- Font: Inter
+- Headlines: text-3xl → text-5xl (responsive)
+- Intros: text-xl → text-2xl (responsive)
+- Body: text-base, text-lg
 
-## Key Documentation Files (Read These First)
+**Section Backgrounds (Alternating):**
+- Hero: gray-50 to white gradient
+- Built For: gray-50
+- How We Work: white/gray-50 alternating per step
+- Focus Areas: white
+- Offers: gray-50
+- Why Valment: gray-50
+- Final CTA: white
 
-**Essential Reading Order:**
-1. `docs/README.md` - Documentation hub and project overview
-2. `docs/CURRENT-STATE.md` - Complete status of all pages and components
-3. `docs/COMPLETION-SUMMARY.md` - Project achievements and statistics
-4. `DEPLOYMENT.md` - Deployment instructions for Hostinger
-5. `docs/NEXT-STEPS.md` - Future priorities and enhancements
-
-**Technical References:**
-- `docs/DESIGN-SYSTEM.md` - Design patterns and conventions
-- `docs/PROJECT-CONTEXT.md` - Business context and goals
-- `docs/HANDOFF-INSTRUCTIONS.md` - Development workflow
+**Component Patterns:**
+- Tiles: white cards with shadow-lg, border, rounded-2xl, hover:shadow-xl
+- Icons: 64x64 in gradient circles/squares
+- Grids: 2x2 for 4 items, 3-column for 3 items
+- Responsive: stacks on mobile, grid on desktop (md breakpoint)
 
 ## Technical Stack
 
 - **Framework:** Next.js 15 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
-- **Components:** shadcn/ui as base
+- **Components:** shadcn/ui
 - **Icons:** Lucide React
 - **Deployment:** Static export (`output: 'export'`)
 - **Hosting:** Hostinger (Apache with .htaccess)
 
-## Design System
+## Content Management Workflow
 
-**Colors:**
-- Primary: Navy blue (#1e3a8a)
-- Secondary: Deep teal 700 (#0d9488)
-- Accent: Amber (#f59e0b)
+### To Update Homepage Content
 
-**Typography:** Inter font, responsive sizes (text-xl to display-5xl)
+**1. Edit JSON:**
+```bash
+# Edit this file:
+C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\content\homepage.json
 
-**Patterns:**
-- Alternating white/gray section backgrounds
-- Floating scroll navigation on long pages (desktop ≥1280px)
-- Card-based layouts with gradients and shadows
-- Icon badges with colored backgrounds
-- Responsive design (mobile-first)
+# Example - Update hero headline:
+{
+  "heroStatic": {
+    "headline": "Your new headline here",
+    ...
+  }
+}
+```
 
-## Content Management
+**2. Build & Deploy:**
+```bash
+cd C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1
+npm run build
+# Upload /out folder to Hostinger public_html/
+```
 
-All content is in JSON files in `content/`:
-- `homepage.json` - Hero carousel (4 slides), value prop, approach, services, credentials
-- `services.json` - 4 complete services with 6 sections each
-- `approach.json` - 5-step methodology
-- `about.json` - Company profile, certifications, expertise
-- `contact.json` - Form configuration
+**3. Verify:**
+```bash
+# Clear browser cache + check live site
+curl https://www.valment.com/
+```
 
-**To update content:** Edit JSON files, no code changes needed.
+### To Update Other Pages
+
+Edit corresponding JSON files:
+- Services: `content/services.json`
+- Approach: `content/approach.json`
+- About: `content/about.json`
+- Contact: `content/contact.json`
+
+## Known Architecture Patterns
+
+### Icon Map Pattern (Used in All Components)
+
+```typescript
+import { Eye, ListChecks, Shield } from "lucide-react";
+
+const iconMap = {
+  Eye,
+  ListChecks,
+  Shield,
+};
+
+// Usage in JSX:
+{(() => {
+  const Icon = iconMap[item.icon as keyof typeof iconMap];
+  return Icon ? <Icon className="w-8 h-8 text-white" /> : null;
+})()}
+```
+
+**Critical:** Always use IIFE pattern for icon rendering, NOT function calls.
+
+### Props Interface Pattern
+
+```typescript
+interface SectionProps {
+  headline: string;
+  intro: string;
+  items: Array<{
+    icon: string;
+    title: string;
+    description: string;
+    gradient: string;
+  }>;
+}
+
+export function Section({ headline, intro, items }: SectionProps) {
+  // Component implementation
+}
+```
+
+## Current Priorities
+
+### Priority 1: Remaining Pages
+- **Status:** Services, Approach, About, Contact pages need review
+- **Action:** Verify all pages follow same JSON architecture pattern
+- **Goal:** Ensure entire site uses single-source-of-truth pattern
+
+### Priority 2: Contact Form Backend
+- **Status:** Form UI complete, needs backend integration
+- **Options:** 
+  - Formspree (easiest)
+  - SendGrid API
+  - Custom serverless function
+- **Action:** User needs to choose solution and provide credentials
+
+### Priority 3: Final Deployment Optimization
+- **Google Analytics:** Add tracking code
+- **Legal Pages:** Privacy Policy, Terms of Service
+- **Performance:** Lighthouse audit and optimization
+- **SEO:** Submit sitemap to Google Search Console
+
+### Priority 4: Documentation
+- **Update docs/** folder to reflect new architecture
+- **Create ARCHITECTURE.md** explaining JSON-first pattern
+- **Update CURRENT-STATE.md** with new homepage sections
+
+## Common Tasks & Examples
+
+### Add New Section to Homepage
+
+**1. Add JSON Content:**
+```json
+// In content/homepage.json
+{
+  "newSection": {
+    "headline": "Section Title",
+    "items": [...]
+  }
+}
+```
+
+**2. Create Component:**
+```typescript
+// components/sections/new-section.tsx
+interface NewSectionProps {
+  headline: string;
+  items: Array<any>;
+}
+
+export function NewSection({ headline, items }: NewSectionProps) {
+  return <section>...</section>;
+}
+```
+
+**3. Import and Use:**
+```typescript
+// app/page.tsx
+import { NewSection } from "@/components/sections/new-section";
+import homepageContent from "@/content/homepage.json";
+
+<NewSection 
+  headline={homepageContent.newSection.headline}
+  items={homepageContent.newSection.items}
+/>
+```
+
+### Update Existing Content
+
+**Just edit the JSON file** - no code changes needed!
+
+```json
+// content/homepage.json
+{
+  "heroStatic": {
+    "headline": "Updated headline",  // ← Change this
+    "subheadline": "Updated subheadline",  // ← Change this
+    ...
+  }
+}
+```
 
 ## Business Context
 
 **Company:** Valment Partners Inc.
-- **Location:** Oakville, Ontario, Canada
-- **Founder:** Reinhardt M.
-- **Focus:** Process & data intelligence for SAP transformations
+- **Location:** Oakville, Ontario, Canada  
+- **Future:** Valment Solutions Inc. (US entity planned)
+- **Brand:** "Valment" for public-facing, "Valment Partners Inc." for legal
 
-**Services:**
+**Services (4 Focus Areas):**
 1. Process Analytics & Continuous Improvement
-2. SAP Modernisation & Clean-Core Discovery (featuring SAP Plug and Gain)
+2. SAP Modernisation & Clean-Core Discovery (SAP Signavio Plug and Gain)
 3. Enterprise Architecture & Transformation Governance
 4. AI Governance & AI Agent Governance Foundations
 
-**Key Differentiators:**
-- Three Integrated Pillars: Process intelligence, Portfolio management, Value-Driven Governance
-- SAP Signavio, SAP BTP/BDC, Databricks expertise
-- 15+ years experience, 12+ certifications (SAP, Databricks, TOGAF, GRCP)
+**Key Tools:**
+- SAP Signavio
+- SAP LeanIX
+- SAP Business Data Cloud
+- SAP BTP
+- Databricks
 
-**Reference documents in Claude Project context:**
+**Engagement Models (3 Ways to Work):**
+1. Discovery Sprint (4-6 weeks)
+2. Embedded Initiative Leadership (0.5-2 days/week)
+3. Continuous Improvement Operating System (ongoing)
+
+**Reference documents in Claude Project:**
 - Business_profile_chat01
 - LinkedIn_Profile
 - Go_to_market_01
 - New_service_content
 
-## Known Issues & Current Priorities
-
-### Priority 1: Deployment (Current Blocker)
-- **Issue:** Subpages get 403 errors on Hostinger
-- **Solution Created:** `.htaccess` file with routing rules in `public/.htaccess`
-- **Action Needed:** User must rebuild (`npm run build`) and re-upload
-
-### Priority 2: Contact Form Backend
-- **Status:** Form UI complete, needs backend API
-- **Current:** Calls `/api/contact` endpoint (not yet created)
-- **Options:** Formspree, SendGrid, custom Node.js API
-- **Environment:** Needs `NEXT_PUBLIC_API_URL` configured
-
-### Priority 3: Post-Launch Enhancements (Optional)
-- Google Analytics integration
-- Legal pages (Privacy Policy, Terms of Service)
-- Performance optimization (Lighthouse audit)
-- Social media Open Graph images
-
-## Component Patterns to Follow
-
-**When adding new sections:**
-```typescript
-// 1. Create reusable component in /components/sections/
-// 2. Use existing UI components from /components/ui/
-// 3. Store content in /content/*.json
-// 4. Follow existing patterns (Section wrapper, SectionHeader, etc.)
-// 5. Maintain responsive design (mobile-first)
-```
-
-**Key Reusable Components:**
-- `Section` - Layout wrapper with background/spacing control
-- `SectionHeader` - Standardized headers (headline + subheadline)
-- `SectionNav` - Floating scroll navigation (desktop only)
-- `Card` - shadcn/ui cards with consistent styling
-- `Button` - Tailwind + shadcn/ui buttons
-
-## Development Commands
-
-**Working directory:** `C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1`
-
-```bash
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-
-# Build static export
-npm run build
-# → Creates /out folder
-
-# Lint code
-npm run lint
-```
-
 ## What Can I Help With?
 
 I can assist with:
 - ✅ Content updates (editing JSON files)
-- ✅ New sections or pages
-- ✅ Component modifications
+- ✅ New sections or components
+- ✅ Fixing bugs or issues
 - ✅ Styling adjustments
-- ✅ Deployment troubleshooting
+- ✅ Reviewing other pages (Services, Approach, About, Contact)
+- ✅ Contact form backend integration
 - ✅ SEO optimization
-- ✅ Form backend integration
 - ✅ Performance improvements
 - ✅ Documentation updates
 
-## Questions to Ask Me
+## Questions to Get Started
 
-To get started quickly, you can ask me:
-- "What needs to be done to deploy the site?"
-- "How do I add a new section to the homepage?"
-- "Can you help me update the Services content?"
-- "How do I set up the contact form backend?"
-- "Can you review the hero carousel on mobile?"
-- "Help me optimize for Google SEO"
+- "Can you review the Services page and ensure it follows the JSON pattern?"
+- "Help me set up the contact form backend with Formspree"
+- "Can you create an ARCHITECTURE.md file explaining the JSON-first pattern?"
+- "Review the About page - did the Expertise content merge properly?"
+- "What's the best way to add Google Analytics?"
+- "Help me optimize the site for Lighthouse performance score"
 
 ---
 
@@ -272,54 +426,60 @@ To get started quickly, you can ask me:
 
 ---
 
-## Usage Instructions
+## Quick Start (Recommended)
 
-### **Quick Start (Recommended)**
-
-1. **Start a new chat** in this Claude project
-2. **Copy and paste this short version:**
+Copy this shorter version to start a new chat:
 
 ```
 I'm continuing the Valment website project.
 
 Working directory: C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1
 
-Please read these files using Filesystem tools:
-1. C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\CONTINUATION-PROMPT.md
-2. C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\docs\CURRENT-STATE.md
-3. C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\DEPLOYMENT.md
+Please read this file first:
+C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\CONTINUATION-PROMPT.md
 
-Last session summary:
-- Fixed hero carousel for mobile (now card-based with peek effect)
-- Created .htaccess, robots.txt, sitemap.xml for deployment
-- All 5 pages complete and ready
-- Current issue: Subpages get 403 on Hostinger (needs rebuild + re-upload)
+Recent changes (last session):
+✅ Complete homepage refactor - replaced carousel with static hero + 7 new sections
+✅ Implemented proper JSON architecture - all content in homepage.json
+✅ Fixed all components to accept props (zero hardcoded content)
+✅ Fixed icon rendering bug in how-we-work.tsx
+✅ Site structure simplified from 5 pages to 4
+✅ All verified clean - no old content remaining
 
-What needs to be done to complete deployment?
+Current status:
+- Homepage: Production ready ✅
+- Other pages: Need review to ensure they follow JSON pattern
+- Contact form: Needs backend integration
+- Deployment: Ready for next build
+
+What should we work on next?
 ```
 
-### **Full Context (Alternative)**
+## File Access Instructions
 
-Copy the entire prompt between `**PROMPT START:**` and `**PROMPT END:**` above.
+**Read files:**
+```
+Filesystem:read_text_file
+Path: C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\[filename]
+```
 
-## How This Works
+**List directory:**
+```
+Filesystem:list_directory
+Path: C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\[directory]
+```
 
-- Your website code is at: `C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1`
-- Claude will use **Filesystem tools** to read/edit your files
-- The AI can access all your code and documentation using these tools
-- No need for `/mnt/project/` - that's only for the business context documents
+**Edit files:**
+```
+Filesystem:write_file or Filesystem:edit_file
+Path: C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1\[filename]
+```
 
-## Files Available
+## Critical Reminders
 
-**Your Website Code:**
-- Full codebase at `C:\Users\rmueh\OneDrive\Documents\atValment\www\valpa0.1`
-- All accessible via Filesystem tools
-
-**Business Context (in Claude Project):**
-- Business_profile_chat01
-- LinkedIn_Profile  
-- Go_to_market_01
-- Homedirectory
-- New_service_content
-
-These provide business strategy and content direction.
+1. **All content is in JSON** - never hardcode content in components
+2. **Icons render as JSX** - use IIFE pattern, not function calls
+3. **Props are required** - every section component must accept props
+4. **Type safety** - all components must have TypeScript interfaces
+5. **Mobile-first** - always test responsive design
+6. **Single source of truth** - content/homepage.json is the master file

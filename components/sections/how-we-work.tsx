@@ -1,159 +1,256 @@
-import { Eye, ListChecks, Shield } from "lucide-react";
+import { Eye, ListChecks, Shield, CheckCircle2 } from "lucide-react";
+import { StatsVisual } from "./approach/stats-visual";
+import { PortfolioVisual } from "./approach/portfolio-visual";
+import { CommitmentVisual } from "./approach/commitment-visual";
 
-export function HowWeWork() {
+const iconMap = {
+  Eye,
+  ListChecks,
+  Shield,
+};
+
+// More flexible interfaces to match JSON structure
+interface VisualData {
+  type: string;
+  title?: string;
+  stats?: Array<{ label: string; value: string; color: string }>;
+  items?: Array<{ label: string; count: string; description: string; color: string }>;
+  footer?: string | { label: string; value: string };
+  mainValue?: string;
+  mainLabel?: string;
+  details?: Array<{ label: string; value: string }>;
+}
+
+interface Step {
+  number: string;
+  icon: string;
+  title: string;
+  description: string;
+  youGet: string[];
+  visual: VisualData;
+  gradient: string;
+}
+
+interface HowWeWorkProps {
+  headline: string;
+  intro?: string;
+  steps: Step[];
+  closingLine: string;
+}
+
+export function HowWeWork({ headline, intro, steps, closingLine }: HowWeWorkProps) {
+  const renderVisual = (visual: VisualData) => {
+    if (visual.type === "stats" && visual.stats && visual.title) {
+      return (
+        <StatsVisual
+          title={visual.title}
+          stats={visual.stats as Array<{ label: string; value: string; color: "blue" | "teal" | "amber" }>}
+          footer={typeof visual.footer === "object" ? visual.footer : undefined}
+        />
+      );
+    }
+    if (visual.type === "portfolio" && visual.items && visual.title) {
+      return (
+        <PortfolioVisual
+          title={visual.title}
+          items={visual.items as Array<{ label: string; count: string; description: string; color: "green" | "blue" | "gray" }>}
+          footer={typeof visual.footer === "string" ? visual.footer : undefined}
+        />
+      );
+    }
+    if (visual.type === "commitment" && visual.title && visual.mainValue && visual.mainLabel && visual.details) {
+      return (
+        <CommitmentVisual
+          title={visual.title}
+          mainValue={visual.mainValue}
+          mainLabel={visual.mainLabel}
+          details={visual.details}
+        />
+      );
+    }
+    return null;
+  };
+
   return (
     <section className="py-24">
       {/* Section Header */}
       <div className="text-center mb-16 px-4 md:px-6">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-      How we deliver results
-      </h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          {headline}
+        </h2>
+        {intro && (
+          <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            {intro}
+          </p>
+        )}
       </div>
 
-      {/* Step 1: Discover reality - Left aligned */}
-      <div className="bg-white py-16">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
-            <div>
-              <div className="inline-flex items-center gap-2 mb-6">
-                <div className="h-px w-12 bg-amber-500"></div>
-                <span className="text-sm uppercase tracking-wider text-gray-600 font-medium">
-                  Step 1
-                </span>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Discover reality
-              </h3>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                Use process analytics and mining, operational KPIs, and stakeholder input to identify 
-                the few constraints that truly limit performance.
-              </p>
-            </div>
-
-            {/* Visual Card */}
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-teal-100 rounded-3xl blur-3xl opacity-50"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm border border-gray-200 rounded-3xl p-12">
-                <Eye className="w-20 h-20 text-blue-600 mb-6" />
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">Process variants analyzed</span>
-                    <span className="font-bold text-2xl text-gray-900">127</span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">Bottlenecks identified</span>
-                    <span className="font-bold text-2xl text-gray-900">8</span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">Value at stake</span>
-                    <span className="font-bold text-2xl text-gray-900">$2.4M</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Step 2: Build portfolio management capability - Right aligned */}
+      {/* Step 1: Discovery - Left aligned */}
       <div className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Visual Card - comes first on desktop */}
-            <div className="relative lg:order-1">
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-100 to-blue-100 rounded-3xl blur-3xl opacity-50"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm border border-gray-200 rounded-3xl p-12">
-                <ListChecks className="w-20 h-20 text-teal-600 mb-6" />
-                <div className="space-y-4">
-                  <div className="border-l-4 border-amber-500 pl-4">
-                    <div className="text-sm text-gray-600 mb-1">High value, low effort</div>
-                    <div className="font-bold text-xl text-gray-900">Quick wins (3)</div>
-                  </div>
-                  <div className="border-l-4 border-blue-300 pl-4">
-                    <div className="text-sm text-gray-600 mb-1">Strategic investments</div>
-                    <div className="font-bold text-xl text-gray-900">Major initiatives (5)</div>
-                  </div>
-                  <div className="border-l-4 border-gray-300 pl-4">
-                    <div className="text-sm text-gray-600 mb-1">Deferred or removed</div>
-                    <div className="font-bold text-xl text-gray-900">Low priority (12)</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Content - comes second on desktop */}
-            <div className="lg:order-2">
-              <div className="inline-flex items-center gap-2 mb-6">
-                <div className="h-px w-12 bg-amber-500"></div>
-                <span className="text-sm uppercase tracking-wider text-gray-600 font-medium">
-                  Step 2
-                </span>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Build portfolio management capability
-              </h3>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                Translate insights into a value-ranked initiative portfolio with clear owners, success measures, 
-                dependencies, and sequencing. This is where SAP modernization decisions and AI agent initiatives 
-                get shaped into controlled, executable work.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Step 3: Implement with governance and coaching - Left aligned */}
-      <div className="bg-white py-16">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Content - Left */}
             <div>
-              <div className="inline-flex items-center gap-2 mb-6">
+              <div className="inline-flex items-center gap-2 mb-4">
                 <div className="h-px w-12 bg-amber-500"></div>
                 <span className="text-sm uppercase tracking-wider text-gray-600 font-medium">
-                  Step 3
+                  Step {steps[0].number}
                 </span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Implement with governance and coaching
-              </h3>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                Establish cadence, decision forums, KPI tracking, and practical guardrails so delivery stays 
-                controlled and teams strengthen their capability over time.
+              
+              <div className="flex items-center gap-3 mb-3">
+                <div className={`h-10 w-10 rounded-lg bg-gradient-to-br ${steps[0].gradient} flex items-center justify-center`}>
+                  {(() => {
+                    const Icon = iconMap[steps[0].icon as keyof typeof iconMap];
+                    return Icon ? <Icon className="h-5 w-5 text-white" /> : null;
+                  })()}
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900">
+                  {steps[0].title}
+                </h2>
+              </div>
+
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                {steps[0].description}
               </p>
+
+              {/* You Get */}
+              <div>
+                <h3 className="text-base font-semibold text-gray-900 mb-3">
+                  You get
+                </h3>
+                <ul className="space-y-2">
+                  {steps[0].youGet.map((item, idx) => (
+                    <li key={idx} className="flex gap-2 text-gray-700 text-sm">
+                      <CheckCircle2 className="h-4 w-4 text-teal-600 shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            {/* Visual Card */}
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl blur-3xl opacity-50"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm border border-gray-200 rounded-3xl p-12">
-                <Shield className="w-20 h-20 text-amber-600 mb-6" />
-                <div className="space-y-4 text-center">
-                  <div className="text-sm text-gray-600 uppercase tracking-wider">
-                    Governance Model
-                  </div>
-                  <div className="font-bold text-5xl bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
-                    Continuous
-                  </div>
-                  <div className="text-lg text-gray-700">
-                    Monitoring + Weekly Reviews
-                  </div>
-                  <div className="text-sm text-gray-600 pt-4">
-                    Decision rights clear, progress visible, capability building
-                  </div>
+            {/* Visual Card - Right */}
+            <div className="lg:sticky lg:top-24">
+              {renderVisual(steps[0].visual)}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Step 2: Portfolio - Right aligned */}
+      <div className="bg-white py-16">
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Visual Card - Left */}
+            <div className="lg:order-1 lg:sticky lg:top-24">
+              {renderVisual(steps[1].visual)}
+            </div>
+
+            {/* Content - Right */}
+            <div className="lg:order-2">
+              <div className="inline-flex items-center gap-2 mb-4">
+                <div className="h-px w-12 bg-amber-500"></div>
+                <span className="text-sm uppercase tracking-wider text-gray-600 font-medium">
+                  Step {steps[1].number}
+                </span>
+              </div>
+              
+              <div className="flex items-center gap-3 mb-3">
+                <div className={`h-10 w-10 rounded-lg bg-gradient-to-br ${steps[1].gradient} flex items-center justify-center`}>
+                  {(() => {
+                    const Icon = iconMap[steps[1].icon as keyof typeof iconMap];
+                    return Icon ? <Icon className="h-5 w-5 text-white" /> : null;
+                  })()}
                 </div>
+                <h2 className="text-3xl font-bold text-gray-900">
+                  {steps[1].title}
+                </h2>
+              </div>
+
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                {steps[1].description}
+              </p>
+
+              {/* You Get */}
+              <div>
+                <h3 className="text-base font-semibold text-gray-900 mb-3">
+                  You get
+                </h3>
+                <ul className="space-y-2">
+                  {steps[1].youGet.map((item, idx) => (
+                    <li key={idx} className="flex gap-2 text-gray-700 text-sm">
+                      <CheckCircle2 className="h-4 w-4 text-teal-600 shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Optional closing line */}
-      <div className="text-center mt-12 px-4 md:px-6">
-        <p className="text-lg text-gray-600">
-          Delivered as a focused sprint, embedded initiative leadership, or a combination of both.
-        </p>
+      {/* Step 3: Governance - Left aligned */}
+      <div className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Content - Left */}
+            <div>
+              <div className="inline-flex items-center gap-2 mb-4">
+                <div className="h-px w-12 bg-amber-500"></div>
+                <span className="text-sm uppercase tracking-wider text-gray-600 font-medium">
+                  Step {steps[2].number}
+                </span>
+              </div>
+              
+              <div className="flex items-center gap-3 mb-3">
+                <div className={`h-10 w-10 rounded-lg bg-gradient-to-br ${steps[2].gradient} flex items-center justify-center`}>
+                  {(() => {
+                    const Icon = iconMap[steps[2].icon as keyof typeof iconMap];
+                    return Icon ? <Icon className="h-5 w-5 text-white" /> : null;
+                  })()}
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900">
+                  {steps[2].title}
+                </h2>
+              </div>
+
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                {steps[2].description}
+              </p>
+
+              {/* You Get */}
+              <div>
+                <h3 className="text-base font-semibold text-gray-900 mb-3">
+                  You get
+                </h3>
+                <ul className="space-y-2">
+                  {steps[2].youGet.map((item, idx) => (
+                    <li key={idx} className="flex gap-2 text-gray-700 text-sm">
+                      <CheckCircle2 className="h-4 w-4 text-teal-600 shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Visual Card - Right */}
+            <div className="lg:sticky lg:top-24">
+              {renderVisual(steps[2].visual)}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Closing line */}
+      <div className="bg-white py-12">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <p className="text-center text-lg text-gray-600 leading-relaxed">
+            {closingLine}
+          </p>
+        </div>
       </div>
     </section>
   );

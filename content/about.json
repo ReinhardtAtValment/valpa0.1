@@ -5,10 +5,10 @@
   },
   "profile": {
     "headline": "Who We Are",
-    "intro": "Valment Partners helps organizations turn process, data, and architecture insights into measurable business value. Founded by practitioners with deep expertise in SAP-driven transformations, data platforms, and enterprise architecture, we work with senior leadership and technical teams to deliver practical, governed improvement.",
+    "intro": "Valment Partners turns process and data signals into measurable business value. We apply a disciplined approach—evidence-based discovery, value-driven prioritization, and lightweight governance—to make improvements both impactful and sustainable. Founded by practitioners with deep expertise in SAP transformations, data platforms, and enterprise architecture.",
     "mission": "Our mission is simple: make business value visible, trackable, and sustainable. Whether you're optimizing SAP processes, modernizing your architecture, or governing AI adoption, we apply the same disciplined methodology to ensure execution and results.",
     "approach": "We typically engage part-time and advisory, designed to strengthen your internal capability rather than create dependency. Most engagements are 0.5-2 days per week, focused on discovery sprints, portfolio management, and fractional leadership.",
-    "experience": "Extensive global experience delivering transformations across Europe, Asia, and North America. Industries served include automotive, manufacturing, professional services, and technology."
+    "experience": "Global experience across Europe, Asia, and North America in manufacturing, automotive, technology, and professional services sectors."
   },
   "certifications": {
     "headline": "Certifications & Credentials",
@@ -22,7 +22,7 @@
           "SAP BTP Solution Architect",
           "SAP Signavio Process Management",
           "SAP Signavio Process Analysis",
-          "LeanIX Enterprise Architecture"
+          "SAP LeanIX Enterprise Architecture"
         ]
       },
       {
@@ -47,7 +47,7 @@
     ]
   },
   "expertise": {
-    "headline": "Technical Expertise",
+    "headline": "Core Capabilities",
     "intro": "Deep capabilities across four interconnected domains.",
     "areas": [
       {
@@ -102,33 +102,6 @@
         ],
         "tools": "Databricks (MLflow, GenAI), SAP AI Core, governance frameworks"
       }
-    ]
-  },
-  "industries": {
-    "headline": "Industry Experience",
-    "intro": "Extensive global experience delivering transformations across multiple industries and regions.",
-    "sectors": [
-      {
-        "name": "Automotive",
-        "description": "Vehicle production, supply chain optimization, and quality management systems"
-      },
-      {
-        "name": "Manufacturing",
-        "description": "Complex production processes, quality control, and operational excellence"
-      },
-      {
-        "name": "Professional Services",
-        "description": "Project-driven operations, resource management, and service delivery"
-      },
-      {
-        "name": "Technology",
-        "description": "Fast-paced innovation, agile delivery, and platform development"
-      }
-    ],
-    "regions": [
-      "Europe",
-      "Asia",
-      "North America"
     ]
   },
   "differentiator": {

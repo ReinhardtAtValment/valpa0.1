@@ -23,9 +23,23 @@
 ## Deploy Steps
 
 ### Step 1: Build New Static Export
+
+**Windows (PowerShell) - Recommended:**
+```bash
+npm run buildstatic
+```
+
+**Alternative (if buildstatic fails):**
 ```bash
 npm run build
 ```
+
+**Manual PowerShell command (if needed):**
+```powershell
+Remove-Item Env:__NEXT_PRIVATE_STANDALONE_CONFIG -ErrorAction SilentlyContinue; Remove-Item Env:__NEXT_PRIVATE_ORIGIN -ErrorAction SilentlyContinue; Remove-Item Env:NEXT_DEPLOYMENT_ID -ErrorAction SilentlyContinue; Remove-Item Env:__NEXT_PRIVATE_RUNTIME_TYPE -ErrorAction SilentlyContinue; Remove-Item Env:NEXT_OTEL_FETCH_DISABLED -ErrorAction SilentlyContinue; npm run build
+```
+
+> **Note:** The `buildstatic` command clears Next.js environment variables that can interfere with static export builds. Use this if `npm run build` gives "generate is not a function" errors.
 
 This will create a fresh `/out` folder with:
 - Proper directory structure

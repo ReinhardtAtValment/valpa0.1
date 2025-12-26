@@ -69,9 +69,7 @@ export default function ContactPage() {
       newErrors.email = "Please enter a valid email address";
     }
 
-    if (!formData.company.trim()) {
-      newErrors.company = "Company is required";
-    }
+    // Company is now optional - no validation needed
 
     if (formData.services.length === 0) {
       newErrors.services = "Please select at least one service";

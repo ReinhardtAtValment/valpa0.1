@@ -1,0 +1,117 @@
+{
+  "hero": {
+    "headline": "Privacy Policy",
+    "lastUpdated": "December 25, 2025"
+  },
+  "introduction": {
+    "text": "Valment Partners Inc. (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.valment.com and use our services.",
+    "commitment": "We are committed to compliance with the Personal Information Protection and Electronic Documents Act (PIPEDA) and other applicable Canadian privacy legislation."
+  },
+  "sections": [
+    {
+      "title": "Information We Collect",
+      "subsections": [
+        {
+          "subtitle": "Personal Information You Provide",
+          "content": "When you contact us through our website, we collect:",
+          "items": [
+            "Name and contact information (email address)",
+            "Company name and professional details",
+            "Information about services you're interested in",
+            "Details about your current technology environment",
+            "Any additional information you choose to provide in your message"
+          ]
+        },
+        {
+          "subtitle": "Automatically Collected Information",
+          "content": "When you visit our website, we may automatically collect:",
+          "items": [
+            "IP address and browser type",
+            "Device information and operating system",
+            "Pages visited and time spent on pages",
+            "Referring website addresses",
+            "General location information (city/region level)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "How We Use Your Information",
+      "content": "We use the information we collect to:",
+      "items": [
+        "Respond to your inquiries and communicate with you about our services",
+        "Provide, maintain, and improve our services",
+        "Understand how visitors use our website to improve user experience",
+        "Send you information about our services (only with your consent)",
+        "Comply with legal obligations and protect our legal rights",
+        "Detect, prevent, and address technical issues or fraudulent activity"
+      ]
+    },
+    {
+      "title": "How We Share Your Information",
+      "intro": "We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:",
+      "items": [
+        "**Service Providers**: We may share information with trusted third-party service providers who assist us in operating our website and conducting our business (e.g., email service providers, analytics providers). These providers are contractually obligated to keep your information confidential.",
+        "**Legal Requirements**: We may disclose your information when required by law, court order, or governmental authority.",
+        "**Business Transfers**: In the event of a merger, acquisition, or sale of assets, your information may be transferred to the acquiring entity.",
+        "**With Your Consent**: We may share your information with your explicit consent for specific purposes."
+      ]
+    },
+    {
+      "title": "Cookies and Tracking Technologies",
+      "intro": "We use cookies and similar tracking technologies to enhance your experience on our website:",
+      "items": [
+        "**Essential Cookies**: Required for basic website functionality",
+        "**Analytics Cookies**: Help us understand how visitors interact with our website (e.g., Google Analytics)",
+        "**Preference Cookies**: Remember your settings and preferences"
+      ],
+      "note": "You can control cookies through your browser settings. However, disabling cookies may affect website functionality."
+    },
+    {
+      "title": "Data Security",
+      "content": "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security."
+    },
+    {
+      "title": "Data Retention",
+      "content": "We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. Contact form submissions are typically retained for 24 months unless you request earlier deletion."
+    },
+    {
+      "title": "Your Privacy Rights",
+      "intro": "Under Canadian privacy legislation, you have the right to:",
+      "items": [
+        "**Access**: Request access to the personal information we hold about you",
+        "**Correction**: Request correction of inaccurate or incomplete information",
+        "**Deletion**: Request deletion of your personal information, subject to legal obligations",
+        "**Withdraw Consent**: Withdraw your consent for us to process your information at any time",
+        "**Complaint**: File a complaint with the Privacy Commissioner of Canada if you believe your privacy rights have been violated"
+      ],
+      "contact": "To exercise these rights, please contact us using the information provided below."
+    },
+    {
+      "title": "Third-Party Links",
+      "content": "Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party websites you visit."
+    },
+    {
+      "title": "Children's Privacy",
+      "content": "Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected information from a child without parental consent, we will take steps to delete that information."
+    },
+    {
+      "title": "International Data Transfers",
+      "content": "Your information may be transferred to and processed in countries other than Canada. When we transfer your information internationally, we ensure appropriate safeguards are in place to protect your data in accordance with this Privacy Policy and applicable law."
+    },
+    {
+      "title": "Changes to This Privacy Policy",
+      "content": "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the \"Last Updated\" date. Your continued use of our website after any changes indicates your acceptance of the updated policy."
+    },
+    {
+      "title": "Contact Us",
+      "content": "If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:",
+      "contactInfo": {
+        "company": "Valment Partners Inc.",
+        "address": "Oakville, Ontario, Canada",
+        "email": "privacy@valment.com",
+        "website": "www.valment.com"
+      }
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "hero": {
+    "headline": "Cookie Policy",
+    "lastUpdated": "December 25, 2025"
+  },
+  "introduction": {
+    "text": "This Cookie Policy explains how Valment Partners Inc. (\"we\", \"our\", or \"us\") uses cookies and similar tracking technologies on our website www.valment.com (the \"Website\").",
+    "whatAreCookies": "Cookies are small text files that are placed on your device when you visit a website. They help websites remember information about your visit, which can make your next visit easier and the website more useful to you."
+  },
+  "sections": [
+    {
+      "title": "Types of Cookies We Use",
+      "subsections": [
+        {
+          "subtitle": "Essential Cookies",
+          "content": "These cookies are necessary for the Website to function properly. They enable core functionality such as security, network management, and accessibility.",
+          "examples": [
+            "Session cookies that keep you logged in as you navigate between pages",
+            "Security cookies that help identify and prevent security risks",
+            "Load balancing cookies that ensure the Website remains stable and available"
+          ],
+          "canDisable": false
+        },
+        {
+          "subtitle": "Analytics Cookies",
+          "content": "These cookies help us understand how visitors interact with our Website by collecting and reporting information anonymously. We use this information to improve our Website and services.",
+          "examples": [
+            "Google Analytics cookies that track visitor behavior and demographics",
+            "Cookies that measure page performance and loading times",
+            "Cookies that help us understand which content is most popular"
+          ],
+          "canDisable": true,
+          "provider": "Google Analytics"
+        },
+        {
+          "subtitle": "Functional Cookies",
+          "content": "These cookies enable enhanced functionality and personalization, such as remembering your preferences and choices.",
+          "examples": [
+            "Cookies that remember your language preference",
+            "Cookies that save your form inputs for convenience",
+            "Cookies that remember your display preferences"
+          ],
+          "canDisable": true
+        }
+      ]
+    },
+    {
+      "title": "Third-Party Cookies",
+      "intro": "We use the following third-party services that may set cookies on your device:",
+      "services": [
+        {
+          "name": "Google Analytics",
+          "purpose": "Website analytics and performance measurement",
+          "privacy": "https://policies.google.com/privacy",
+          "optOut": "https://tools.google.com/dlpage/gaoptout"
+        }
+      ],
+      "note": "These third-party services have their own privacy policies and cookie policies. We recommend reviewing their policies to understand how they use cookies and how to manage your preferences."
+    },
+    {
+      "title": "How to Control Cookies",
+      "subsections": [
+        {
+          "subtitle": "Browser Settings",
+          "content": "Most web browsers allow you to control cookies through their settings. You can typically:",
+          "items": [
+            "View what cookies are stored on your device",
+            "Delete cookies from your device",
+            "Block all cookies or specific cookies",
+            "Set preferences for specific websites"
+          ],
+          "note": "Please note that blocking all cookies may affect the functionality of our Website and other websites you visit."
+        },
+        {
+          "subtitle": "Browser-Specific Instructions",
+          "browsers": [
+            {
+              "name": "Google Chrome",
+              "link": "https://support.google.com/chrome/answer/95647"
+            },
+            {
+              "name": "Mozilla Firefox",
+              "link": "https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer"
+            },
+            {
+              "name": "Safari",
+              "link": "https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac"
+            },
+            {
+              "name": "Microsoft Edge",
+              "link": "https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
+            }
+          ]
+        },
+        {
+          "subtitle": "Opting Out of Analytics",
+          "content": "To opt out of Google Analytics tracking across all websites, you can install the Google Analytics Opt-out Browser Add-on:",
+          "link": "https://tools.google.com/dlpage/gaoptout"
+        }
+      ]
+    },
+    {
+      "title": "Cookie Retention",
+      "content": "Different cookies have different retention periods:",
+      "types": [
+        {
+          "type": "Session Cookies",
+          "duration": "Deleted when you close your browser"
+        },
+        {
+          "type": "Persistent Cookies",
+          "duration": "Remain on your device for a set period (typically 1-24 months) or until you delete them"
+        }
+      ]
+    },
+    {
+      "title": "Updates to This Cookie Policy",
+      "content": "We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the updated Cookie Policy on this page and updating the \"Last Updated\" date."
+    },
+    {
+      "title": "Contact Us",
+      "content": "If you have any questions about our use of cookies or this Cookie Policy, please contact us:",
+      "contactInfo": {
+        "company": "Valment Partners Inc.",
+        "address": "Oakville, Ontario, Canada",
+        "email": "privacy@valment.com",
+        "website": "www.valment.com"
+      }
+    }
+  ],
+  "summary": {
+    "title": "Cookie Summary Table",
+    "cookies": [
+      {
+        "name": "Essential Cookies",
+        "purpose": "Website functionality and security",
+        "type": "First-party",
+        "duration": "Session / Varies",
+        "canDisable": "No"
+      },
+      {
+        "name": "Google Analytics (_ga, _gid, _gat)",
+        "purpose": "Website analytics",
+        "type": "Third-party",
+        "duration": "1-24 months",
+        "canDisable": "Yes"
+      },
+      {
+        "name": "Preference Cookies",
+        "purpose": "Remember user preferences",
+        "type": "First-party",
+        "duration": "1-12 months",
+        "canDisable": "Yes"
+      }
+    ]
+  }
+}

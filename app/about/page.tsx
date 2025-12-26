@@ -33,7 +33,6 @@ export default function AboutPage() {
     { id: "profile", label: "Who We Are" },
     { id: "certifications", label: "Credentials" },
     { id: "expertise", label: "Expertise" },
-    { id: "industries", label: "Experience" },
   ];
 
   return (
@@ -187,49 +186,6 @@ export default function AboutPage() {
                 </Card>
               );
             })}
-          </div>
-        </div>
-      </Section>
-
-      {/* Industries & Experience Section */}
-      <Section id="industries" background="default" spacing="default">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <SectionHeader
-              headline={content.industries.headline}
-              subheadline={content.industries.intro}
-              align="center"
-              variant="standard"
-            />
-
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              {content.industries.sectors.map((sector, idx) => (
-                <Card key={idx} className="border-0 shadow-md hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      {sector.name}
-                    </h3>
-                    <p className="text-sm text-gray-600">
-                      {sector.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="text-center">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-50 to-teal-50 border border-blue-200 rounded-lg px-8 py-4">
-                <Globe2 className="h-6 w-6 text-teal-600" />
-                <div className="text-left">
-                  <div className="text-xs text-gray-600 uppercase tracking-wider mb-1">
-                    Geographic Reach
-                  </div>
-                  <div className="text-base font-semibold text-gray-900">
-                    {content.industries.regions.join(" • ")}
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </Section>
