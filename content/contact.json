@@ -40,8 +40,8 @@
             "label": "Process Analytics & Continuous Improvement"
           },
           {
-            "value": "sap-modernisation",
-            "label": "SAP Modernisation & Clean-Core"
+            "value": "sap-modernization",
+            "label": "SAP Modernization & Clean-Core"
           },
           {
             "value": "enterprise-architecture",
@@ -109,7 +109,8 @@
       "text": "Send Message",
       "submitting": "Sending...",
       "success": "Thank you! We'll be in touch within 24-48 hours.",
-      "error": "Something went wrong. Please try again."
+      "error": "Something went wrong. Please try again.",
+      "reassurance": "No spam. We'll respond with a suggested first step."
     }
   }
 }

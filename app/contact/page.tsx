@@ -334,7 +334,11 @@ export default function ContactPage() {
                       )}
                     </Button>
                     
-                    <p className="text-xs text-gray-500 mt-3">
+                    <p className="text-sm text-gray-600 mt-3">
+                      {content.form.submit.reassurance}
+                    </p>
+                    
+                    <p className="text-xs text-gray-500 mt-2">
                       <span className="text-red-500">*</span> Required fields
                     </p>
                   </div>

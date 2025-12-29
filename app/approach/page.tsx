@@ -20,9 +20,9 @@ export default function ApproachPage() {
 
   const sections = [
     { id: "overview", label: "Overview" },
-    { id: "discovery", label: "Discovery" },
-    { id: "portfolio", label: "Portfolio" },
-    { id: "governance", label: "Governance" },
+    { id: "discovery", label: "Discovery & Baseline" },
+    { id: "portfolio", label: "Value-Based Portfolio" },
+    { id: "governance", label: "Governance & Enablement" },
     { id: "value", label: "Value" },
   ];
 
@@ -39,6 +39,21 @@ export default function ApproachPage() {
             align="center"
             variant="standard"
           />
+          
+          {/* How to Start Guide */}
+          <div className="max-w-2xl mx-auto mt-12">
+            <div className="bg-gradient-to-r from-teal-50 to-blue-50 border-2 border-teal-200 rounded-lg p-6 text-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <ArrowRight className="h-5 w-5 text-teal-600" />
+                <span className="text-sm font-semibold text-teal-900 uppercase tracking-wider">
+                  How to Start
+                </span>
+              </div>
+              <p className="text-lg text-gray-800 font-medium">
+                {content.overview.howToStart}
+              </p>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -157,7 +172,7 @@ export default function ApproachPage() {
                       Typical Engagement
                     </div>
                     <div className="text-sm text-gray-600">
-                      {content.discovery.engagement.duration} • {content.discovery.engagement.scope}
+                      {content.discovery.engagement.duration} • Illustrative example—actual outcomes vary by scope and data availability
                     </div>
                   </div>
                 </CardContent>
@@ -171,61 +186,8 @@ export default function ApproachPage() {
       <Section id="portfolio" background="default" spacing="default">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Visual Card - Left */}
-            <div className="lg:order-1 lg:sticky lg:top-24">
-              <Card className="relative overflow-hidden border-0 shadow-lg">
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-600/10 to-amber-500/10"></div>
-                <CardContent className="p-8 relative">
-                  <h3 className="text-lg font-bold text-gray-900 mb-6">
-                    Portfolio View
-                  </h3>
-                  
-                  <div className="space-y-4">
-                    {/* High Value */}
-                    <div className="bg-gradient-to-r from-green-50 to-green-100 border border-green-200 rounded-lg p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-semibold text-green-800 uppercase tracking-wider">
-                          High Value
-                        </span>
-                        <span className="text-2xl font-bold text-green-900">12</span>
-                      </div>
-                      <div className="text-xs text-green-700">Initiatives Ready</div>
-                    </div>
-
-                    {/* In Progress */}
-                    <div className="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-lg p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-semibold text-blue-800 uppercase tracking-wider">
-                          In Progress
-                        </span>
-                        <span className="text-2xl font-bold text-blue-900">8</span>
-                      </div>
-                      <div className="text-xs text-blue-700">Active Projects</div>
-                    </div>
-
-                    {/* Backlog */}
-                    <div className="bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                          Backlog
-                        </span>
-                        <span className="text-2xl font-bold text-gray-900">23</span>
-                      </div>
-                      <div className="text-xs text-gray-600">Opportunities</div>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 pt-4 border-t border-gray-200">
-                    <div className="text-xs text-gray-600 italic">
-                      Example portfolio at a glance
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Content - Right */}
-            <div className="lg:order-2">
+            {/* Content - Left */}
+            <div>
               <div className="inline-flex items-center gap-2 mb-4">
                 <div className="h-px w-12 bg-amber-500"></div>
                 <span className="text-sm uppercase tracking-wider text-gray-600 font-medium">
@@ -283,6 +245,59 @@ export default function ApproachPage() {
                   </ul>
                 </div>
               </div>
+            </div>
+
+            {/* Visual Card - Right */}
+            <div className="lg:sticky lg:top-24">
+              <Card className="relative overflow-hidden border-0 shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-600/10 to-amber-500/10"></div>
+                <CardContent className="p-8 relative">
+                  <h3 className="text-lg font-bold text-gray-900 mb-6">
+                    Portfolio View
+                  </h3>
+                  
+                  <div className="space-y-4">
+                    {/* High Value */}
+                    <div className="bg-gradient-to-r from-green-50 to-green-100 border border-green-200 rounded-lg p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs font-semibold text-green-800 uppercase tracking-wider">
+                          High Value
+                        </span>
+                        <span className="text-2xl font-bold text-green-900">12</span>
+                      </div>
+                      <div className="text-xs text-green-700">Initiatives Ready</div>
+                    </div>
+
+                    {/* In Progress */}
+                    <div className="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-lg p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs font-semibold text-blue-800 uppercase tracking-wider">
+                          In Progress
+                        </span>
+                        <span className="text-2xl font-bold text-blue-900">8</span>
+                      </div>
+                      <div className="text-xs text-blue-700">Active Projects</div>
+                    </div>
+
+                    {/* Backlog */}
+                    <div className="bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                          Backlog
+                        </span>
+                        <span className="text-2xl font-bold text-gray-900">23</span>
+                      </div>
+                      <div className="text-xs text-gray-600">Opportunities</div>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-gray-200">
+                    <div className="text-xs text-gray-600 italic">
+                      Example portfolio at a glance
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>

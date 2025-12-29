@@ -16,6 +16,7 @@ interface Persona {
 interface BuiltForProps {
   headline: string;
   intro: string;
+  challenges?: string;
   personas: Persona[];
   tools: {
     headline: string;
@@ -23,7 +24,7 @@ interface BuiltForProps {
   };
 }
 
-export function BuiltFor({ headline, intro, personas, tools }: BuiltForProps) {
+export function BuiltFor({ headline, intro, challenges, personas, tools }: BuiltForProps) {
   return (
     <section className="py-24 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
@@ -35,11 +36,20 @@ export function BuiltFor({ headline, intro, personas, tools }: BuiltForProps) {
         </div>
 
         {/* Intro line */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-8 md:mb-10">
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
             {intro}
           </p>
         </div>
+
+        {/* Challenges line (if provided) */}
+        {challenges && (
+          <div className="text-center mb-12 md:mb-16">
+            <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed italic">
+              {challenges}
+            </p>
+          </div>
+        )}
 
         {/* Three persona tiles */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">

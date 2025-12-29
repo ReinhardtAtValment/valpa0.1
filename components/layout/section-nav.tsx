@@ -61,7 +61,7 @@ export function SectionNav({ sections }: SectionNavProps) {
 
   return (
     <nav
-      className={`fixed right-8 top-1/2 -translate-y-1/2 z-40 hidden xl:block transition-opacity duration-300 ${
+      className={`fixed right-4 lg:right-8 top-1/2 -translate-y-1/2 z-40 hidden md:block transition-opacity duration-300 ${
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
       aria-label="Section navigation"

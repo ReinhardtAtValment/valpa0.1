@@ -42,6 +42,7 @@ export default function Home() {
         <BuiltFor
           headline={homepageContent.builtFor.headline}
           intro={homepageContent.builtFor.intro}
+          challenges={homepageContent.builtFor.challenges}
           personas={homepageContent.builtFor.personas}
           tools={homepageContent.builtFor.tools}
         />

@@ -1,14 +1,15 @@
 {
   "overview": {
     "headline": "Our Methodology",
-    "subheadline": "Whether working on process optimization, SAP modernization, or AI governance, we follow a consistent approach that prioritizes business value and ensures execution."
+    "subheadline": "Whether working on process optimization, SAP modernization, or AI governance, we follow a consistent approach that prioritizes business value and ensures execution.",
+    "howToStart": "Start with a 4–6 week Discovery Sprint. If value is real, continue with Portfolio + Leadership support."
   },
   "discovery": {
     "number": "01",
-    "headline": "Discovery Sprints",
+    "headline": "Discovery & Baseline",
     "tagline": "Data-Driven Analysis",
     "duration": "4-6 Weeks",
-    "purpose": "Use process mining, event analytics, and data intelligence to uncover what's actually happening—not what you think is happening.",
+    "purpose": "Use process mining, event analytics, and data intelligence to uncover what's actually driving rework, delays, and variants.",
     "whatHappens": [
       "Extract and analyze operational data (process logs, system events, transactions)",
       "Identify bottlenecks, waste, rework, and automation candidates",
@@ -33,7 +34,7 @@
   },
   "portfolio": {
     "number": "02",
-    "headline": "Portfolio Management",
+    "headline": "Value-Based Portfolio",
     "tagline": "Transparent Prioritization",
     "purpose": "Transform findings into a transparent improvement pipeline with clear business value, effort estimates, and ownership.",
     "description": "Whether it's process improvements, SAP clean-core initiatives, architecture decisions, or AI use cases—every opportunity becomes a transparent initiative. You see exactly what's delivering results and what's stuck.",
@@ -53,7 +54,7 @@
   },
   "governance": {
     "number": "03",
-    "headline": "Fractional Leadership",
+    "headline": "Governance & Enablement",
     "tagline": "Continuous Oversight",
     "duration": "Ongoing",
     "purpose": "Provide fractional leadership to keep your portfolio moving. We maintain oversight, track KPIs, manage risks, and ensure initiatives actually ship—not just get discussed.",

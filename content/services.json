@@ -27,6 +27,16 @@
           "Simple KPIs and monitoring for ongoing control"
         ]
       },
+      "deliverables": {
+        "headline": "Tangible Deliverables",
+        "items": [
+          "Baseline pack: KPIs + definitions",
+          "Variant & bottleneck register",
+          "Initiative one-pagers with value estimates",
+          "90-180 day roadmap",
+          "Governance cadence templates"
+        ]
+      },
       "howItWorks": {
         "headline": "How It Works",
         "description": "High-level approach to establishing process intelligence and continuous improvement:",
@@ -51,8 +61,8 @@
       }
     },
     {
-      "id": "sap-modernisation",
-      "title": "SAP Modernisation & Clean-Core Discovery",
+      "id": "sap-modernization",
+      "title": "SAP Modernization & Clean-Core Discovery",
       "tagline": "Reduce complexity. Safeguard your SAP investment. Enable innovation.",
       "icon": "TrendingUp",
       "purpose": "Support SAP transformations by reducing complexity and enabling future innovation without destabilizing the core.",
@@ -73,6 +83,16 @@
           "Transaction analysis identifying harmonization opportunities and change management needs",
           "Identification of extensions suited for SAP BTP or side-by-side architectures",
           "Alignment between process design and system simplification"
+        ]
+      },
+      "deliverables": {
+        "headline": "Tangible Deliverables",
+        "items": [
+          "Process House with Best-Run Scores + transaction analysis",
+          "Custom code inventory (value-adding vs. technical debt)",
+          "Clean-core roadmap (retire, refactor, BTP)",
+          "Change impact & harmonization analysis",
+          "Customization governance framework"
         ]
       },
       "howItWorks": {
@@ -122,6 +142,16 @@
           "Support for architects, PMOs, and transformation leads"
         ]
       },
+      "deliverables": {
+        "headline": "Tangible Deliverables",
+        "items": [
+          "Architecture principles + decision framework",
+          "Solution review templates",
+          "Target architecture blueprints",
+          "Governance playbook (escalation, decisions, cadence)",
+          "Architect enablement library"
+        ]
+      },
       "howItWorks": {
         "headline": "How It Works",
         "description": "Pragmatic approach to establishing architecture governance that enables rather than blocks:",
@@ -166,6 +196,16 @@
           "Defined ownership across the AI lifecycle",
           "Integration of governance into data and ML platforms",
           "Initial guardrails for AI agents and automation"
+        ]
+      },
+      "deliverables": {
+        "headline": "Tangible Deliverables",
+        "items": [
+          "AI governance charter (principles, roles, approval workflow)",
+          "Risk assessment framework",
+          "Platform controls (MLflow, Unity Catalog, audit logs)",
+          "Agent autonomy guidelines",
+          "Use case approval + monitoring playbook"
         ]
       },
       "howItWorks": {

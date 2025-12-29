@@ -22,6 +22,10 @@ interface ServiceDetailProps {
       headline: string;
       points: string[];
     };
+    deliverables: {
+      headline: string;
+      items: string[];
+    };
     howItWorks: {
       headline: string;
       description: string;
@@ -104,6 +108,23 @@ export function ServiceDetail({ service }: ServiceDetailProps) {
           </div>
         </div>
 
+        {/* Deliverables - Full Width */}
+        <div className="mb-12">
+          <h3 className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wider">
+            {service.deliverables.headline}
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {service.deliverables.items.map((item, index) => (
+              <div key={index} className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg p-4 border border-primary/10">
+                <div className="flex gap-3">
+                  <CheckCircle2 className="flex-shrink-0 w-5 h-5 text-primary mt-0.5" />
+                  <span className="text-sm text-foreground font-medium leading-relaxed">{item}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* How It Works */}
         <div className="mb-12 relative">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl -z-10"></div>
@@ -114,7 +135,7 @@ export function ServiceDetail({ service }: ServiceDetailProps) {
             <p className="text-muted-foreground mb-6 leading-relaxed">
               {service.howItWorks.description}
             </p>
-            <ol className="space-y-4">
+            <ul className="space-y-4">
               {service.howItWorks.steps.map((step, index) => (
                 <li key={index} className="flex gap-4">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold text-sm">
@@ -125,7 +146,7 @@ export function ServiceDetail({ service }: ServiceDetailProps) {
                   </span>
                 </li>
               ))}
-            </ol>
+            </ul>
           </div>
         </div>
 

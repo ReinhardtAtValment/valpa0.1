@@ -85,7 +85,7 @@ export function HowWeWork({ headline, intro, steps, closingLine }: HowWeWorkProp
         )}
       </div>
 
-      {/* Step 1: Discovery - Left aligned */}
+      {/* Step 1: Discovery - Content Left, Visual Right */}
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -138,17 +138,12 @@ export function HowWeWork({ headline, intro, steps, closingLine }: HowWeWorkProp
         </div>
       </div>
 
-      {/* Step 2: Portfolio - Right aligned */}
+      {/* Step 2: Portfolio - Content Left, Visual Right */}
       <div className="bg-white py-16">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Visual Card - Left */}
-            <div className="lg:order-1 lg:sticky lg:top-24">
-              {renderVisual(steps[1].visual)}
-            </div>
-
-            {/* Content - Right */}
-            <div className="lg:order-2">
+            {/* Content - Left */}
+            <div>
               <div className="inline-flex items-center gap-2 mb-4">
                 <div className="h-px w-12 bg-amber-500"></div>
                 <span className="text-sm uppercase tracking-wider text-gray-600 font-medium">
@@ -187,11 +182,16 @@ export function HowWeWork({ headline, intro, steps, closingLine }: HowWeWorkProp
                 </ul>
               </div>
             </div>
+
+            {/* Visual Card - Right */}
+            <div className="lg:sticky lg:top-24">
+              {renderVisual(steps[1].visual)}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Step 3: Governance - Left aligned */}
+      {/* Step 3: Governance - Content Left, Visual Right */}
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start">

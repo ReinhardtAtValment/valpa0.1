@@ -1,7 +1,7 @@
 {
   "heroStatic": {
-    "headline": "Build lasting capabilities in process, data, and governance.",
-    "subheadline": "Make SAP modernization succeed and accelerate AI transformation and AI agent implementation. Use process intelligence and value-driven prioritization to focus on the right work and implement it with control.",
+    "headline": "Build lasting capabilities in process, data and governance.",
+    "subheadline": "Make SAP modernization succeed. Strengthen AI transformation and AI agent implementation—with proper guardrails, ownership, and auditability. Use process intelligence and value-driven prioritization to focus on the right work and implement it with control.",
     "tiles": [
       {
         "icon": "Eye",
@@ -37,6 +37,7 @@
   "builtFor": {
     "headline": "For teams that want results that last",
     "intro": "Built for leaders who need to deliver transformation, architects who need to maintain coherence, and practitioners who need to implement with confidence.",
+    "challenges": "Typical challenges: upgrade friction from customizations, process drift after go-live, AI pilots without controls, and improvement backlogs that never get prioritized.",
     "personas": [
       {
         "icon": "Users",
@@ -157,8 +158,8 @@
         "tools": "SAP Signavio, SAP Business Data Cloud, Databricks, BI platforms"
       },
       {
-        "id": "sap-modernisation",
-        "title": "SAP Modernisation & Clean-Core Discovery",
+        "id": "sap-modernization",
+        "title": "SAP Modernization & Clean-Core Discovery",
         "tagline": "Reduce complexity. Safeguard your SAP investment. Enable innovation.",
         "description": "Support SAP transformations by identifying and eliminating unnecessary customizations using the Plug and Gain approach. Create pragmatic clean-core roadmaps that enable faster upgrades and innovation.",
         "icon": "TrendingUp",
