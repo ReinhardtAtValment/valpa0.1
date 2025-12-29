@@ -1,24 +1,24 @@
 {
   "heroStatic": {
-    "headline": "Build lasting capabilities in process, data and governance.",
-    "subheadline": "Make SAP modernization succeed. Strengthen AI transformation and AI agent implementation—with proper guardrails, ownership, and auditability. Use process intelligence and value-driven prioritization to focus on the right work and implement it with control.",
+    "headline": "Build lasting capabilities in enterprise architecture and process intelligence for governed innovation.",
+    "subheadline": "Make SAP modernization and AI transformation succeed—with proper guardrails, ownership, and auditability. We use enterprise architecture and process intelligence, value-driven portfolios, and lean governance to focus on the right innovation initiatives and implement them with control.",
     "tiles": [
       {
         "icon": "Eye",
         "title": "See what is real",
-        "description": "Process analytics and mining to expose bottlenecks, variants, delays, and complexity drivers.",
+        "description": "Process and data intelligence to expose bottlenecks, variants, delays, and complexity drivers.",
         "gradient": "from-blue-600 to-teal-600"
       },
       {
         "icon": "ListChecks",
         "title": "Decide what matters",
-        "description": "Initiative portfolio ranked by value, effort, risk, and dependencies—decision-ready for leadership.",
+        "description": "Improvement and innovation portfolio ranked by value, effort, risk, and dependencies—decision-ready for leadership.",
         "gradient": "from-teal-600 to-blue-700"
       },
       {
         "icon": "Shield",
         "title": "Deliver with control",
-        "description": "Governance, cadence, and coaching so improvements land safely and create measurable value.",
+        "description": "Governance, cadence, and coaching so improvements and innovation land safely and create measurable value.",
         "gradient": "from-amber-500 to-orange-600"
       }
     ],
@@ -65,13 +65,13 @@
   },
   "howWeWork": {
     "headline": "A practical way to build lasting capabilities",
-    "intro": "Valment turns process and data signals into a prioritized improvement portfolio—and puts governance in place so value is delivered repeatedly, not once.",
+    "intro": "Valment turns process and data signals into a value-driven innovation portfolio—and puts governance in place so value is delivered repeatedly, not once.",
     "steps": [
       {
         "number": "01",
         "icon": "Eye",
         "title": "Discovery & Baseline",
-        "description": "See what's really happening. Establish a fact-based baseline across key processes, quantify bottlenecks and variants, and define measurable outcomes.",
+        "description": "See what's really happening. Establish a fact-based baseline across key processes, quantify bottlenecks and variants, and define measurable outcomes and innovation levers.",
         "youGet": [
           "Current-state baseline + top improvement opportunities",
           "Initial KPI set and measurement logic",
@@ -95,8 +95,8 @@
       {
         "number": "02",
         "icon": "ListChecks",
-        "title": "Value-Based Portfolio",
-        "description": "Turn insights into an executable plan. Convert findings into initiatives with owners, effort/value estimates, and dependencies—ready for leadership decisions.",
+        "title": "Value-Driven Innovation Portfolio",
+        "description": "Turn insights into an executable innovation portfolio. Convert findings into initiatives and experiments with clear owners, value/effort estimates, and dependencies—ready for leadership decisions.",
         "youGet": [
           "Prioritized improvement portfolio (value, effort, risk)",
           "Roadmap with milestones and success metrics",
@@ -118,7 +118,7 @@
         "number": "03",
         "icon": "Shield",
         "title": "Governance & Enablement",
-        "description": "Make improvement sustainable. Set up a lightweight cadence to track outcomes, remove blockers, and transfer capability into the organization.",
+        "description": "Make improvement and innovation sustainable. Set up a lightweight cadence to track outcomes, remove blockers, and transfer capability into the organization.",
         "youGet": [
           "Governance routines (cadence, guardrails, KPI reviews)",
           "Benefits tracking and continuous improvement loop",
@@ -141,13 +141,13 @@
   },
   "focusAreas": {
     "headline": "Where we apply the approach",
-    "intro": "Choose the service area where you need support. We bring the same disciplined approach to each domain.",
+    "intro": "Choose the service area where you need support. We bring the same disciplined approach to enterprise architecture and process intelligence for governed innovation across each domain.",
     "areas": [
       {
         "id": "process-analytics",
-        "title": "Process Analytics & Continuous Improvement",
-        "tagline": "Make process behavior visible. Build a repeatable improvement loop.",
-        "description": "Establish data-driven improvement for business-critical SAP processes using process mining, event analytics, and BI tools. Move from intuition to evidence.",
+        "title": "Process Intelligence & Continuous Improvement",
+        "tagline": "Make process behavior visible. Build a repeatable improvement and innovation loop.",
+        "description": "Establish data-driven improvement for business-critical SAP processes using process mining, event analytics, and BI tools. Move from intuition to evidence for where to innovate.",
         "icon": "Network",
         "gradient": "from-blue-600 to-teal-600",
         "outcomes": [
@@ -160,7 +160,7 @@
       {
         "id": "sap-modernization",
         "title": "SAP Modernization & Clean-Core Discovery",
-        "tagline": "Reduce complexity. Safeguard your SAP investment. Enable innovation.",
+        "tagline": "Reduce complexity. Safeguard your SAP investment. Create room for governed innovation.",
         "description": "Support SAP transformations by identifying and eliminating unnecessary customizations using the Plug and Gain approach. Create pragmatic clean-core roadmaps that enable faster upgrades and innovation.",
         "icon": "TrendingUp",
         "gradient": "from-teal-600 to-blue-700",
@@ -169,14 +169,14 @@
           "Process House view with Best-Run Scores and transaction analysis",
           "Pragmatic clean-core roadmap",
           "Lower long-term maintenance effort",
-          "Faster upgrade and innovation cycles"
+          "Faster upgrade and governed innovation cycles"
         ],
         "tools": "SAP S/4HANA, SAP BTP, Signavio Process Insights & Process Intelligence (Plug and Gain), LeanIX, Business Data Cloud"
       },
       {
         "id": "enterprise-architecture",
         "title": "Enterprise Architecture & Transformation Governance",
-        "tagline": "Structure for complex programs. Clarity without bureaucracy.",
+        "tagline": "Structure for complex programs. Clarity for sustainable innovation—without bureaucracy.",
         "description": "Provide architecture governance that strengthens delivery rather than slowing it down. Clear principles, practical guidance, and integration into your transformation approach.",
         "icon": "Building2",
         "gradient": "from-amber-500 to-orange-600",
@@ -191,7 +191,7 @@
       {
         "id": "ai-governance",
         "title": "AI Governance & AI Agent Governance Foundations",
-        "tagline": "Enable AI adoption with accountability and control.",
+        "tagline": "Enable AI-driven innovation with accountability and control.",
         "description": "Establish governance for AI and GenAI use cases while maintaining oversight and trust. Prepare for autonomous and semi-autonomous AI agents with proper guardrails.",
         "icon": "Sparkles",
         "gradient": "from-purple-600 to-pink-600",
@@ -199,7 +199,7 @@
           "Clear AI governance principles and decision criteria",
           "Integration of controls into ML and data platforms",
           "Reduced regulatory and reputational risk",
-          "Guardrails for increasing AI autonomy"
+          "Guardrails for increasing AI autonomy and agent-driven innovation"
         ],
         "tools": "Databricks (MLflow, Unity Catalog), data platforms, existing compliance frameworks"
       }
@@ -207,14 +207,14 @@
   },
   "offers": {
     "headline": "Ways to work together",
-    "intro": "Choose the engagement format that matches your urgency and capacity. Each format applies across all service areas and is designed to create measurable progress and strengthen internal capability.",
+    "intro": "Choose the engagement format that matches your urgency and capacity. Each format applies across all service areas and is designed to create measurable progress, support governed innovation, and strengthen internal capability.",
     "items": [
       {
         "icon": "Zap",
         "title": "Discovery Sprint",
         "subtitle": "4–6 weeks",
         "description": "Fast diagnostic to identify what matters most. Delivered as one tight engagement with clear outputs: current-state view, prioritized opportunities, and a roadmap for next steps.",
-        "bestWhen": "Best when you need clarity fast",
+        "bestWhen": "Best when you need clarity fast on where to focus innovation and improvement",
         "gradient": "from-blue-600 to-teal-600"
       },
       {
@@ -222,7 +222,7 @@
         "title": "Embedded Initiative Leadership",
         "subtitle": "0.5–2 days per week, 3–12 months",
         "description": "Fractional leadership embedded in your team to own delivery of a specific initiative—whether process transformation, SAP clean-core, or AI governance rollout.",
-        "bestWhen": "Best when you need delivery support inside the team",
+        "bestWhen": "Best when you need delivery support inside the team for high-stakes improvement and innovation initiatives",
         "gradient": "from-teal-600 to-blue-700"
       },
       {
@@ -230,19 +230,19 @@
         "title": "Continuous Improvement Operating System",
         "subtitle": "Ongoing partnership",
         "description": "Build internal capability to run process intelligence, portfolio management, and governed delivery as a permanent operating rhythm—not a one-time project.",
-        "bestWhen": "Best when you want improvement to become repeatable",
+        "bestWhen": "Best when you want improvement and innovation to become repeatable",
         "gradient": "from-amber-500 to-orange-600"
       }
     ]
   },
   "whyValment": {
     "headline": "Why Valment",
-    "intro": "A capability-first mindset that builds what you need inside your organization rather than creating external dependency.",
+    "intro": "A capability-first mindset that builds what you need inside your organization—so enterprise architecture and process intelligence for governed innovation are sustainable, not consultant-dependent.",
     "differentiators": [
       {
         "icon": "Users",
         "title": "Embedded, accountable leadership",
-        "description": "We work inside your teams, not as external observers. Outcomes, not hours.",
+        "description": "We work inside your teams, not as external observers. Outcomes and learning, not hours.",
         "gradient": "from-blue-600 to-teal-600"
       },
       {
@@ -260,7 +260,7 @@
       {
         "icon": "Wrench",
         "title": "Modern tool fluency",
-        "description": "Deep experience with SAP, process mining, data platforms, and AI governance tools that enterprises actually use.",
+        "description": "Deep experience with SAP, process mining, data platforms, and AI governance tools that enterprises actually use to drive innovation safely.",
         "gradient": "from-purple-600 to-pink-600"
       }
     ],
@@ -272,7 +272,7 @@
     "certifications": [
       {
         "category": "SAP",
-        "items": ["Business Data Cloud", "BTP Solution Architect", "Signavio Process Management", "Signavio Process Analysis", "SAP LeanIX Enterprise Architecture"]
+        "items": ["Business Data Cloud", "BTP Solution Architect", "Signavio Process Management", "Signavio Process Analysis", "LeanIX Enterprise Architecture"]
       },
       {
         "category": "Data & AI",

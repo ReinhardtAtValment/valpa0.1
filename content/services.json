@@ -1,15 +1,15 @@
 {
   "overview": {
     "headline": "Four Service Areas. One Methodology.",
-    "content": "We help organizations translate process and data insights into measurable and governed value and improvement. Each service applies our disciplined approach: discovery that reveals reality, portfolios that prioritize value, and governance that ensures delivery."
+    "content": "We help SAP-centric organizations build lasting capabilities in enterprise architecture and process intelligence for governed innovation. Each service applies the same disciplined approach: discovery that reveals reality, value-driven innovation portfolios, and lean governance that ensures delivery."
   },
   "services": [
     {
       "id": "process-analytics",
-      "title": "Process Analytics & Continuous Improvement",
-      "tagline": "Make process behavior visible. Build a repeatable improvement loop.",
+      "title": "Process Intelligence & Continuous Improvement",
+      "tagline": "Make process behavior visible. Build a repeatable improvement and innovation loop.",
       "icon": "Network",
-      "purpose": "Establish a repeatable, data-driven improvement loop for business-critical processes.",
+      "purpose": "Establish a repeatable, data-driven improvement and innovation loop for business-critical processes, grounded in process & data intelligence.",
       "context": {
         "headline": "Typical Context",
         "points": [
@@ -39,7 +39,7 @@
       },
       "howItWorks": {
         "headline": "How It Works",
-        "description": "High-level approach to establishing process intelligence and continuous improvement:",
+        "description": "High-level approach to establishing process & data intelligence and continuous improvement:",
         "steps": [
           "Extract and structure event data from SAP and surrounding systems",
           "Analyze flows, variants, delays, and exceptions",
@@ -52,7 +52,7 @@
         "points": [
           "Moves discussions from opinion to fact",
           "Creates transparency for management and process owners",
-          "Enables continuous improvement beyond one-off analysis"
+          "Enables continuous improvement and innovation beyond one-off analysis"
         ]
       },
       "tooling": {
@@ -63,9 +63,9 @@
     {
       "id": "sap-modernization",
       "title": "SAP Modernization & Clean-Core Discovery",
-      "tagline": "Reduce complexity. Safeguard your SAP investment. Enable innovation.",
+      "tagline": "Reduce complexity. Safeguard your SAP investment. Create room for governed innovation.",
       "icon": "TrendingUp",
-      "purpose": "Support SAP transformations by reducing complexity and enabling future innovation without destabilizing the core.",
+      "purpose": "Support SAP transformations by reducing complexity and enabling future innovation on a clean, governed core, informed by process and data intelligence and enterprise architecture insight.",
       "context": {
         "headline": "Typical Context",
         "points": [
@@ -110,7 +110,7 @@
         "headline": "Value",
         "points": [
           "Lower long-term maintenance effort",
-          "Faster upgrades and innovation cycles",
+          "Faster upgrades and governed innovation cycles",
           "Cleaner integration with analytics and AI platforms"
         ]
       },
@@ -122,9 +122,9 @@
     {
       "id": "enterprise-architecture",
       "title": "Enterprise Architecture & Transformation Governance",
-      "tagline": "Structure for complex programs. Clarity without bureaucracy.",
+      "tagline": "Structure for complex programs. Clarity for sustainable innovation—without bureaucracy.",
       "icon": "Shield",
-      "purpose": "Provide structure and clarity for complex transformation initiatives without slowing delivery.",
+      "purpose": "Provide structure and clarity for complex transformation and innovation initiatives without slowing delivery.",
       "context": {
         "headline": "Typical Context",
         "points": [
@@ -167,7 +167,7 @@
         "points": [
           "Reduces architectural drift and rework",
           "Improves decision transparency",
-          "Strengthens internal EA capability"
+          "Strengthens internal EA capability as the backbone for governed innovation"
         ]
       },
       "tooling": {
@@ -178,9 +178,9 @@
     {
       "id": "ai-governance",
       "title": "AI Governance & AI Agent Governance Foundations",
-      "tagline": "Enable AI adoption with accountability and control.",
+      "tagline": "Enable AI-driven innovation with accountability and control.",
       "icon": "Target",
-      "purpose": "Enable AI adoption while maintaining accountability, control, and trust.",
+      "purpose": "Enable AI-driven innovation while maintaining accountability, control, and trust.",
       "context": {
         "headline": "Typical Context",
         "points": [
@@ -223,7 +223,7 @@
         "points": [
           "Enables innovation without losing oversight",
           "Reduces regulatory and reputational risk",
-          "Prepares the organization for increasing AI autonomy"
+          "Prepares the organization for increasing AI autonomy and agent-driven innovation"
         ]
       },
       "tooling": {

@@ -1,7 +1,7 @@
 {
   "overview": {
-    "headline": "Our Methodology",
-    "subheadline": "Whether working on process optimization, SAP modernization, or AI governance, we follow a consistent approach that prioritizes business value and ensures execution.",
+    "headline": "One approach across enterprise architecture, process intelligence, data, and AI",
+    "subheadline": "Whether working on process analytics, SAP modernization, enterprise architecture, or AI governance, we use the same core pattern to build lasting capabilities in enterprise architecture and process intelligence for governed innovation—and ensure execution.",
     "howToStart": "Start with a 4–6 week Discovery Sprint. If value is real, continue with Portfolio + Leadership support."
   },
   "discovery": {
@@ -9,7 +9,7 @@
     "headline": "Discovery & Baseline",
     "tagline": "Data-Driven Analysis",
     "duration": "4-6 Weeks",
-    "purpose": "Use process mining, event analytics, and data intelligence to uncover what's actually driving rework, delays, and variants.",
+    "purpose": "Use process mining, event analytics, and data intelligence to uncover what's actually driving rework, delays, variants, and where the real innovation levers are.",
     "whatHappens": [
       "Extract and analyze operational data (process logs, system events, transactions)",
       "Identify bottlenecks, waste, rework, and automation candidates",
@@ -18,7 +18,7 @@
     ],
     "deliverables": [
       "Process maps and analysis",
-      "Improvement opportunity list (ranked by value vs. effort)",
+      "Improvement and innovation opportunity list (ranked by value vs. effort)",
       "Initial roadmap for next 3-6 months",
       "Lightweight governance framework"
     ],
@@ -34,10 +34,10 @@
   },
   "portfolio": {
     "number": "02",
-    "headline": "Value-Based Portfolio",
+    "headline": "Value-Driven Innovation Portfolio",
     "tagline": "Transparent Prioritization",
-    "purpose": "Transform findings into a transparent improvement pipeline with clear business value, effort estimates, and ownership.",
-    "description": "Whether it's process improvements, SAP clean-core initiatives, architecture decisions, or AI use cases—every opportunity becomes a transparent initiative. You see exactly what's delivering results and what's stuck.",
+    "purpose": "Transform findings into a transparent improvement and innovation pipeline with clear business value, effort estimates, and ownership.",
+    "description": "Whether it's process improvements, SAP clean-core initiatives, architecture decisions, or AI use cases and experiments—every opportunity becomes a transparent initiative. You see exactly what's delivering results and what's stuck.",
     "features": [
       "Clear business value for every initiative (time saved, cost reduced, risk mitigated)",
       "Effort estimates and resource requirements",
@@ -46,7 +46,7 @@
       "Regular portfolio reviews and reprioritization"
     ],
     "outcomes": [
-      "Transparent view of all improvement initiatives",
+      "Transparent view of all improvement and innovation initiatives",
       "Value-based prioritization (not politics)",
       "Clear accountability and ownership",
       "Better resource allocation decisions"
@@ -57,12 +57,12 @@
     "headline": "Governance & Enablement",
     "tagline": "Continuous Oversight",
     "duration": "Ongoing",
-    "purpose": "Provide fractional leadership to keep your portfolio moving. We maintain oversight, track KPIs, manage risks, and ensure initiatives actually ship—not just get discussed.",
+    "purpose": "Provide fractional leadership to keep your improvement and innovation portfolio moving. We maintain oversight, track KPIs, manage risks, and ensure initiatives actually ship—not just get discussed.",
     "whatHappens": [
       "Regular portfolio reviews (bi-weekly or monthly)",
       "Track KPIs and initiative progress",
       "Resolve blockers and manage risks",
-      "Maintain architecture and governance alignment",
+      "Maintain enterprise architecture and governance alignment",
       "Guide teams on prioritization and execution"
     ],
     "commitment": {
@@ -70,7 +70,7 @@
       "duration": "3-12 month engagements"
     },
     "bestFor": [
-      "Organizations with multiple improvement initiatives",
+      "Organizations with multiple improvement and innovation initiatives",
       "Need for ongoing architecture or governance oversight",
       "Building internal capability over time"
     ]

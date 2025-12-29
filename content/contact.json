@@ -1,7 +1,7 @@
 {
   "hero": {
     "headline": "Contact us",
-    "subheadline": "We'll follow up to discuss how we can help."
+    "subheadline": "We'll follow up with a concrete suggestion for where governed innovation in your processes, data, and architecture can deliver measurable value."
   },
   "form": {
     "sections": {
@@ -37,7 +37,7 @@
         "options": [
           {
             "value": "process-analytics",
-            "label": "Process Analytics & Continuous Improvement"
+            "label": "Process Intelligence & Continuous Improvement"
           },
           {
             "value": "sap-modernization",

@@ -1,13 +1,13 @@
 {
   "hero": {
     "headline": "About Valment",
-    "subheadline": "Bridging strategy, process, and technology to deliver measurable business value."
+    "subheadline": "Bridging enterprise architecture, process intelligence, data, and AI for governed innovation and measurable business value."
   },
   "profile": {
     "headline": "Who We Are",
-    "intro": "Valment Partners turns process and data signals into measurable business value. We apply a disciplined approach—evidence-based discovery, value-driven prioritization, and lightweight governance—to make improvements both impactful and sustainable. Founded by practitioners with deep expertise in SAP transformations, data platforms, and enterprise architecture.",
-    "mission": "Our mission is simple: make business value visible, trackable, and sustainable. Whether you're optimizing SAP processes, modernizing your architecture, or governing AI adoption, we apply the same disciplined methodology to ensure execution and results.",
-    "approach": "We typically engage part-time and advisory, designed to strengthen your internal capability rather than create dependency. Most engagements are 0.5-2 days per week, focused on discovery sprints, portfolio management, and fractional leadership.",
+    "intro": "Valment helps SAP-centric organizations build lasting capabilities in enterprise architecture and process intelligence for governed innovation. We apply a disciplined approach—evidence-based discovery, value-driven innovation portfolios, and lean governance—to make improvements and innovation both impactful and sustainable. Founded by practitioners with deep expertise in SAP transformations, innovation management, data platforms, and enterprise architecture.",
+    "mission": "Our mission is simple: make business value and innovation outcomes visible, trackable, and sustainable. Whether you're optimizing SAP processes, modernizing your architecture, or governing AI and agent adoption, we apply the same disciplined methodology to ensure execution and results.",
+    "approach": "We typically engage part-time and advisory, designed to strengthen your internal capability rather than create dependency. Most engagements are 0.5–2 days per week, focused on discovery sprints, value-driven innovation portfolios, and fractional leadership.",
     "experience": "Global experience across Europe, Asia, and North America in manufacturing, automotive, technology, and professional services sectors."
   },
   "certifications": {
@@ -48,12 +48,12 @@
   },
   "expertise": {
     "headline": "Core Capabilities",
-    "intro": "Deep capabilities across four interconnected domains.",
+    "intro": "Deep capabilities across four interconnected domains that together enable enterprise architecture and process intelligence for governed innovation.",
     "areas": [
       {
         "title": "Process & Operations",
         "icon": "Network",
-        "description": "Process mining and optimization using SAP Signavio, event analytics, and BI platforms. Building continuous improvement loops for business-critical processes.",
+        "description": "Process mining and optimization using SAP Signavio, event analytics, and BI platforms. Building continuous improvement and innovation loops for business-critical processes, grounded in process & data intelligence.",
         "capabilities": [
           "Process mining and discovery",
           "Process optimization and redesign",
@@ -66,7 +66,7 @@
       {
         "title": "SAP Landscape",
         "icon": "Database",
-        "description": "S/4HANA modernization, clean-core architecture, and BTP extensions. Supporting SAP transformations by reducing complexity and enabling innovation.",
+        "description": "S/4HANA modernization, clean-core architecture, and BTP extensions. Supporting SAP transformations by reducing complexity and creating room for governed innovation.",
         "capabilities": [
           "S/4HANA transformation and optimization",
           "Clean-core architecture and custom code analysis",
@@ -79,7 +79,7 @@
       {
         "title": "Data Platforms",
         "icon": "BarChart3",
-        "description": "Lakehouse architecture, data governance, and analytics platforms. Building scalable data foundations for process intelligence and AI.",
+        "description": "Lakehouse architecture, data governance, and analytics platforms. Building scalable data foundations for process & data intelligence and AI-driven innovation.",
         "capabilities": [
           "Databricks lakehouse architecture",
           "Data governance and quality frameworks",
@@ -92,7 +92,7 @@
       {
         "title": "AI & Automation",
         "icon": "Sparkles",
-        "description": "GenAI applications, ML operations, and AI governance. Enabling responsible AI adoption with proper oversight and control.",
+        "description": "GenAI applications, ML operations, and AI governance. Enabling responsible AI-driven innovation with proper oversight and control.",
         "capabilities": [
           "GenAI use case design and implementation",
           "ML operations and model governance",
@@ -106,10 +106,10 @@
   },
   "differentiator": {
     "headline": "What Makes Us Different",
-    "description": "Known for bridging strategy, process, and technology—working effectively with both senior leadership and technical teams.",
+    "description": "Known for bridging strategy, process, enterprise architecture and technology—working effectively with both senior leadership and technical teams.",
     "points": [
-      "We focus on measurable business value, not just analysis or recommendations",
-      "We strengthen your internal capability rather than create dependency",
+      "We focus on measurable business value and governed innovation, not just analysis or recommendations",
+      "We strengthen your internal capability so enterprise architecture and process intelligence for governed innovation remain in-house rather than consultant-dependent",
       "We bring technical depth combined with business context",
       "We provide honest assessment of what's working and what's not"
     ]
