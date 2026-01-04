@@ -32,9 +32,8 @@ interface FormErrors {
 }
 
 interface ApiError {
-  msg: string;
-  param: string;
-  location: string;
+  field: string;
+  message: string;
 }
 
 export default function ContactPage() {
@@ -88,26 +87,81 @@ export default function ContactPage() {
 
     setIsSubmitting(true);
     setSubmitStatus("idle");
+    setErrors({});
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001/api";
+      // Construct API endpoint URL
+      const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL 
+        ? `${process.env.NEXT_PUBLIC_API_URL}/api/contact`
+        : process.env.NODE_ENV === 'production'
+        ? 'https://app.valment.com/api/contact'
+        : 'http://localhost:3001/api/contact';
       
-      const response = await fetch(`${apiUrl}/contact`, {
+      // Log debugging information
+      const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'server-side';
+      console.log('Submitting to API:', apiBaseUrl);
+      console.log('Current origin:', currentOrigin);
+      
+      const requestBody = {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        company: formData.company.trim() || undefined,
+        services: formData.services, // Keep as array - API accepts arrays
+        currentEnvironment: formData.currentEnvironment.length > 0 
+          ? formData.currentEnvironment 
+          : undefined, // Only include if not empty
+        message: formData.message.trim() || undefined,
+      };
+      
+      console.log('Request body:', requestBody);
+      
+      const response = await fetch(apiBaseUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          ...formData,
-          services: formData.services.join(", "),
-          currentEnvironment: formData.currentEnvironment.join(", "),
-          submittedAt: new Date().toISOString(),
-        }),
+        body: JSON.stringify(requestBody),
       });
+
+      if (!response.ok && response.status !== 400) {
+        // For non-400 errors, try to get error message
+        const errorText = await response.text();
+        console.error('API Error Response:', response.status, errorText);
+      }
 
       const result = await response.json();
 
-      if (result.success) {
+      if (!response.ok) {
+        // Handle validation errors (400)
+        if (response.status === 400 && result.errors && Array.isArray(result.errors)) {
+          const apiErrors: FormErrors = {};
+          result.errors.forEach((error: ApiError) => {
+            if (error.field === "email") {
+              apiErrors.email = error.message;
+            } else if (error.field === "name") {
+              apiErrors.name = error.message;
+            } else if (error.field === "company") {
+              apiErrors.company = error.message;
+            }
+          });
+          setErrors(apiErrors);
+          setSubmitStatus("error");
+        } 
+        // Handle rate limiting (429)
+        else if (response.status === 429) {
+          setSubmitStatus("error");
+          setErrors({ 
+            email: "Too many requests. Please wait a few minutes before trying again." 
+          });
+        }
+        // Handle other errors
+        else {
+          setSubmitStatus("error");
+          setErrors({ 
+            email: result.message || "Failed to submit form. Please try again." 
+          });
+        }
+      } else if (result.success) {
         setSubmitStatus("success");
         setFormData({
           name: "",
@@ -120,19 +174,36 @@ export default function ContactPage() {
         setErrors({});
       } else {
         setSubmitStatus("error");
-        if (result.errors && Array.isArray(result.errors)) {
-          const apiErrors: FormErrors = {};
-          result.errors.forEach((error: ApiError) => {
-            if (error.param === "email") {
-              apiErrors.email = error.msg;
-            }
-          });
-          setErrors(apiErrors);
-        }
+        setErrors({ 
+          email: result.message || "Failed to submit form. Please try again." 
+        });
       }
     } catch (error) {
       console.error("Form submission error:", error);
       setSubmitStatus("error");
+      // Handle network errors
+      if (error instanceof TypeError && error.message === 'Failed to fetch') {
+        // More detailed error message for debugging
+        const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'unknown';
+        console.error("Fetch failed. Possible causes:");
+        console.error("1. API server not running on http://localhost:3001");
+        console.error(`2. CORS issue - API server may not allow requests from ${currentOrigin}`);
+        console.error("   Solution: Configure API server ALLOWED_ORIGINS to include:", currentOrigin);
+        console.error("3. Network connectivity issue");
+        
+        const errorMessage = `Unable to connect to the API server. This is likely a CORS (Cross-Origin Resource Sharing) issue. The API server needs to allow requests from ${currentOrigin}. Please check the API server configuration.`;
+        setErrors({ 
+          email: errorMessage
+        });
+      } else if (error instanceof Error) {
+        setErrors({ 
+          email: `Error: ${error.message}` 
+        });
+      } else {
+        setErrors({ 
+          email: "An unexpected error occurred. Please try again later." 
+        });
+      }
     } finally {
       setIsSubmitting(false);
     }
