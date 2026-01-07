@@ -59,7 +59,6 @@ npm run build
 
 **Browser Tab Title:**
 - Shows "Valment | Process & Data Intelligence" ✓
-- NOT "BrightSiteAI.com" ✗
 
 **Footer:**
 - Has Privacy Policy link ✓

@@ -25,7 +25,7 @@ www.valment.com/approach  → Works! ✅
 ### 2. 🔴 WRONG BRAND IN GOOGLE - FIXED
 **Before:**
 ```
-Google Search: "BrightSiteAI.com - Reinhardt M" ❌
+Google Search: Wrong brand name in search results ❌
 ```
 
 **After:**
@@ -165,7 +165,6 @@ Check contact form (company optional)
 
 ### Within 48 Hours:
 - ✅ Google re-indexes with correct brand name
-- ✅ "BrightSiteAI" disappears from search results
 
 ---
 
